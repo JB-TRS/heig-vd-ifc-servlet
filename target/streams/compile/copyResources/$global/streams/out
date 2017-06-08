@@ -1,0 +1,4 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(C:\Users\eischer\IdeaProjects\switchmonitor\conf\application.conf,C:\Users\eischer\IdeaProjects\switchmonitor\target\scala-2.11\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\eischer\IdeaProjects\switchmonitor\conf\logback.xml,C:\Users\eischer\IdeaProjects\switchmonitor\target\scala-2.11\classes\logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\eischer\IdeaProjects\switchmonitor\conf\routes,C:\Users\eischer\IdeaProjects\switchmonitor\target\scala-2.11\classes\routes)[0m

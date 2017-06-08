@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.g8/form/form.iml" filepath="$PROJECT_DIR$/.g8/form/form.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/switchmonitor.iml" filepath="$PROJECT_DIR$/.idea/modules/switchmonitor.iml" />
+    </modules>
+  </component>
+</project>
