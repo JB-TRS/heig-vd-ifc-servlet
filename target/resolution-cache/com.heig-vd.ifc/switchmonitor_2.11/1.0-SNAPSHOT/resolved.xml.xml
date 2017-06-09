@@ -4,7 +4,7 @@
 		module="switchmonitor_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20170608130717"
+		publication="20170609113739"
 	>
 		<description>
 		SwitchMonitor
@@ -51,5 +51,6 @@
 		<dependency org="com.typesafe.play" name="play-logback_2.11" rev="2.5.14" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="filters-helpers_2.11" rev="2.5.14" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java-ws_2.11" rev="2.5.14" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java-jdbc_2.11" rev="2.5.14" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

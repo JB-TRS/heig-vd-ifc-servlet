@@ -1,15 +1,10 @@
-@import org.w3c.dom.Element
+@(deviceId: Long, device: Device)
 
-@(deviceId: Long, devices: Seq[Element])
+@main("Device page") {
+    <h1>Equipements: @deviceId</h1>
 
-
-    @main("Device page") {
-        <h1>Equipements: @deviceId</h1>
-
-        <ul>
-            @devices.map { device =>
-                <li>@device.getElementsByTagName("name").item(0).getTextContent()</li>
-                <li>@device.getElementsByTagName("ip").item(0).getTextContent()</li>
-            }
-        </ul>
-    }
+    <ul>
+        <li>@device.getName()</li>
+        <li>@device.getIpAddress()</li>
+    </ul>
+}

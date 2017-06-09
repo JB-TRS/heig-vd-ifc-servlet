@@ -1,0 +1,12 @@
+@(devices: List[Device])
+
+@main("Devices page") {
+    <h1>Liste des équipements</h1>
+
+    @for(device <- devices){
+        <ul>
+            <li>@device.getName()</li>
+            <li>@device.getIpAddress()</li>
+        </ul>
+    }
+}

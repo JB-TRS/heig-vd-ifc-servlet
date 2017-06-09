@@ -10,5 +10,7 @@ scalaVersion := "2.11.11"
 libraryDependencies += filters
 
 libraryDependencies ++= Seq(
-  javaWs
+  javaWs,
+  javaCore,
+  javaJdbc
 )

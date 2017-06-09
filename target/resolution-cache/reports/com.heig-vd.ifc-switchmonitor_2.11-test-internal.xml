@@ -7,15 +7,110 @@
 		revision="1.0-SNAPSHOT"
 		conf="test-internal"
 		confs="universal, universal-docs, universal-src, compile, runtime, test, provided, optional, windows, docker, linux, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170608130717"/>
+		date="20170609113739"/>
 	<dependencies>
-		<module organisation="com.typesafe.play" name="play-java-ws_2.11">
-			<revision name="2.5.14" status="release" pubdate="20170407002941" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="64">
+		<module organisation="com.typesafe.play" name="play-java-jdbc_2.11">
+			<revision name="2.5.14" status="release" pubdate="20170407002845" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="84">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="4394" time="135" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\ivy-2.5.14.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\ivy-2.5.14.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-ws_2.11/2.5.14/play-java-ws_2.11-2.5.14.pom"/>
+				<metadata-artifact status="successful" details="" size="2303" time="118" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\ivy-2.5.14.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\ivy-2.5.14.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-jdbc_2.11/2.5.14/play-java-jdbc_2.11-2.5.14.pom"/>
 				<caller organisation="com.heig-vd.ifc" name="switchmonitor_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="2.5.14" rev-constraint-default="2.5.14" rev-constraint-dynamic="2.5.14" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="play-java-ws_2.11" type="jar" ext="jar" status="successful" details="" size="37304" time="141" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.5.14.jar">
+					<artifact name="play-java-jdbc_2.11" type="jar" ext="jar" status="successful" details="" size="10712" time="174" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.5.14.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-jdbc_2.11/2.5.14/play-java-jdbc_2.11-2.5.14.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-jdbc_2.11">
+			<revision name="2.5.14" status="release" pubdate="20170407002932" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="85">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="successful" details="" size="3795" time="116" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\ivy-2.5.14.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\ivy-2.5.14.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc_2.11/2.5.14/play-jdbc_2.11-2.5.14.pom"/>
+				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="default, compile, runtime, master" rev="2.5.14" rev-constraint-default="2.5.14" rev-constraint-dynamic="2.5.14" callerrev="2.5.14"/>
+				<artifacts>
+					<artifact name="play-jdbc_2.11" type="jar" ext="jar" status="successful" details="" size="108357" time="166" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.5.14.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc_2.11/2.5.14/play-jdbc_2.11-2.5.14.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="tyrex" name="tyrex">
+			<revision name="1.0.1" status="release" pubdate="20051108232044" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="91">
+				<metadata-artifact status="no" details="" size="2329" time="0" location="C:\Users\eischer\.ivy2\cache\tyrex\tyrex\ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/tyrex/tyrex/1.0.1/tyrex-1.0.1.pom"/>
+				<caller organisation="com.typesafe.play" name="play-jdbc_2.11" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="2.5.14"/>
+				<artifacts>
+					<artifact name="tyrex" type="jar" ext="jar" status="no" details="" size="201315" time="0" location="C:\Users\eischer\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/tyrex/tyrex/1.0.1/tyrex-1.0.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.googlecode.usc" name="jdbcdslog">
+			<revision name="1.0.6.2" status="release" pubdate="20111225074305" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/jdbcdslog-exp/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="89">
+				<license name="Apache License,Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="4095" time="0" location="C:\Users\eischer\.ivy2\cache\com.googlecode.usc\jdbcdslog\ivy-1.0.6.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/googlecode/usc/jdbcdslog/1.0.6.2/jdbcdslog-1.0.6.2.pom"/>
+				<caller organisation="com.typesafe.play" name="play-jdbc_2.11" conf="compile, runtime" rev="1.0.6.2" rev-constraint-default="1.0.6.2" rev-constraint-dynamic="1.0.6.2" callerrev="2.5.14"/>
+				<artifacts>
+					<artifact name="jdbcdslog" type="jar" ext="jar" status="no" details="" size="34515" time="0" location="C:\Users\eischer\.ivy2\cache\com.googlecode.usc\jdbcdslog\jars\jdbcdslog-1.0.6.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/googlecode/usc/jdbcdslog/1.0.6.2/jdbcdslog-1.0.6.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.zaxxer" name="HikariCP">
+			<revision name="2.5.1" status="release" pubdate="20160919134722" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/brettwooldridge/HikariCP" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="88">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="7498" time="0" location="C:\Users\eischer\.ivy2\cache\com.zaxxer\HikariCP\ivy-2.5.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/zaxxer/HikariCP/2.5.1/HikariCP-2.5.1.pom"/>
+				<caller organisation="com.typesafe.play" name="play-jdbc_2.11" conf="compile, runtime" rev="2.5.1" rev-constraint-default="2.5.1" rev-constraint-dynamic="2.5.1" callerrev="2.5.14"/>
+				<artifacts>
+					<artifact name="HikariCP" type="bundle" ext="jar" status="no" details="" size="136363" time="0" location="C:\Users\eischer\.ivy2\cache\com.zaxxer\HikariCP\bundles\HikariCP-2.5.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/zaxxer/HikariCP/2.5.1/HikariCP-2.5.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.h2database" name="h2">
+			<revision name="1.4.192" status="release" pubdate="20160526092838" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.h2database.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="90">
+				<license name="MPL 2.0 or EPL 1.0" url="http://h2database.com/html/license.html"/>
+				<metadata-artifact status="no" details="" size="2484" time="0" location="C:\Users\eischer\.ivy2\cache\com.h2database\h2\ivy-1.4.192.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/h2database/h2/1.4.192/h2-1.4.192.pom"/>
+				<caller organisation="com.typesafe.play" name="play-jdbc_2.11" conf="compile, runtime" rev="1.4.192" rev-constraint-default="1.4.192" rev-constraint-dynamic="1.4.192" callerrev="2.5.14"/>
+				<artifacts>
+					<artifact name="h2" type="jar" ext="jar" status="no" details="" size="1775801" time="0" location="C:\Users\eischer\.ivy2\cache\com.h2database\h2\jars\h2-1.4.192.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/h2database/h2/1.4.192/h2-1.4.192.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.jolbox" name="bonecp">
+			<revision name="0.8.0.RELEASE" status="release" pubdate="20131023134844" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="87">
+				<license name="Apache v2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="8194" time="0" location="C:\Users\eischer\.ivy2\cache\com.jolbox\bonecp\ivy-0.8.0.RELEASE.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/jolbox/bonecp/0.8.0.RELEASE/bonecp-0.8.0.RELEASE.pom"/>
+				<caller organisation="com.typesafe.play" name="play-jdbc_2.11" conf="compile, runtime" rev="0.8.0.RELEASE" rev-constraint-default="0.8.0.RELEASE" rev-constraint-dynamic="0.8.0.RELEASE" callerrev="2.5.14"/>
+				<artifacts>
+					<artifact name="bonecp" type="bundle" ext="jar" status="no" details="" size="110600" time="0" location="C:\Users\eischer\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/jolbox/bonecp/0.8.0.RELEASE/bonecp-0.8.0.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-jdbc-api_2.11">
+			<revision name="2.5.14" status="release" pubdate="20170407002747" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="86">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="successful" details="" size="1685" time="116" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\ivy-2.5.14.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\ivy-2.5.14.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-api_2.11/2.5.14/play-jdbc-api_2.11-2.5.14.pom"/>
+				<caller organisation="com.typesafe.play" name="play-jdbc_2.11" conf="compile, runtime" rev="2.5.14" rev-constraint-default="2.5.14" rev-constraint-dynamic="2.5.14" callerrev="2.5.14"/>
+				<artifacts>
+					<artifact name="play-jdbc-api_2.11" type="jar" ext="jar" status="successful" details="" size="6425" time="143" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.14.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-api_2.11/2.5.14/play-jdbc-api_2.11-2.5.14.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-java-ws_2.11">
+			<revision name="2.5.14" status="release" pubdate="20170407002941" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="64">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="4802" time="0" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\ivy-2.5.14.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-ws_2.11/2.5.14/play-java-ws_2.11-2.5.14.pom"/>
+				<caller organisation="com.heig-vd.ifc" name="switchmonitor_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="2.5.14" rev-constraint-default="2.5.14" rev-constraint-dynamic="2.5.14" callerrev="1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="play-java-ws_2.11" type="jar" ext="jar" status="no" details="" size="37304" time="0" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.5.14.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-ws_2.11/2.5.14/play-java-ws_2.11-2.5.14.jar"/>
 					</artifact>
 				</artifacts>
@@ -34,12 +129,12 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-ws_2.11">
-			<revision name="2.5.14" status="release" pubdate="20170407002905" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="65">
+			<revision name="2.5.14" status="release" pubdate="20170407002905" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="65">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="4233" time="131" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-ws_2.11\ivy-2.5.14.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-ws_2.11\ivy-2.5.14.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws_2.11/2.5.14/play-ws_2.11-2.5.14.pom"/>
+				<metadata-artifact status="no" details="" size="4616" time="0" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-ws_2.11\ivy-2.5.14.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws_2.11/2.5.14/play-ws_2.11-2.5.14.pom"/>
 				<caller organisation="com.typesafe.play" name="play-java-ws_2.11" conf="default, compile, runtime, master" rev="2.5.14" rev-constraint-default="2.5.14" rev-constraint-dynamic="2.5.14" callerrev="2.5.14"/>
 				<artifacts>
-					<artifact name="play-ws_2.11" type="jar" ext="jar" status="successful" details="" size="663337" time="250" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.5.14.jar">
+					<artifact name="play-ws_2.11" type="jar" ext="jar" status="no" details="" size="663337" time="0" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.5.14.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws_2.11/2.5.14/play-ws_2.11-2.5.14.jar"/>
 					</artifact>
 				</artifacts>
@@ -73,28 +168,28 @@
 			</revision>
 		</module>
 		<module organisation="org.asynchttpclient" name="async-http-client">
-			<revision name="2.0.24" status="release" pubdate="20161108153614" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="66">
+			<revision name="2.0.24" status="release" pubdate="20161108153614" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="66">
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1855" time="136" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\async-http-client\ivy-2.0.24.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\async-http-client\ivy-2.0.24.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/asynchttpclient/async-http-client/2.0.24/async-http-client-2.0.24.pom"/>
+				<metadata-artifact status="no" details="" size="9507" time="0" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\async-http-client\ivy-2.0.24.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/asynchttpclient/async-http-client/2.0.24/async-http-client-2.0.24.pom"/>
 				<caller organisation="com.typesafe.play" name="play-ws_2.11" conf="compile, runtime" rev="2.0.24" rev-constraint-default="2.0.24" rev-constraint-dynamic="2.0.24" callerrev="2.5.14"/>
 				<caller organisation="com.typesafe.play" name="play-java-ws_2.11" conf="default, compile, runtime, master" rev="2.0.24" rev-constraint-default="2.0.24" rev-constraint-dynamic="2.0.24" callerrev="2.5.14"/>
 				<artifacts>
-					<artifact name="async-http-client" type="jar" ext="jar" status="successful" details="" size="429945" time="151" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\async-http-client\jars\async-http-client-2.0.24.jar">
+					<artifact name="async-http-client" type="jar" ext="jar" status="no" details="" size="429945" time="0" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\async-http-client\jars\async-http-client-2.0.24.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/asynchttpclient/async-http-client/2.0.24/async-http-client-2.0.24.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.javassist" name="javassist">
-			<revision name="3.21.0-GA" status="release" pubdate="20161003184507" resolver="public" artresolver="public" homepage="http://www.javassist.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="78">
+			<revision name="3.21.0-GA" status="release" pubdate="20161003184507" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.javassist.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="78">
 				<license name="MPL 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
 				<license name="LGPL 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/"/>
-				<metadata-artifact status="successful" details="" size="9834" time="136" location="C:\Users\eischer\.ivy2\cache\org.javassist\javassist\ivy-3.21.0-GA.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\org.javassist\javassist\ivy-3.21.0-GA.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.pom"/>
+				<metadata-artifact status="no" details="" size="3235" time="0" location="C:\Users\eischer\.ivy2\cache\org.javassist\javassist\ivy-3.21.0-GA.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.pom"/>
 				<caller organisation="org.reflections" name="reflections" conf="compile, runtime" rev="3.18.2-GA" rev-constraint-default="3.18.2-GA" rev-constraint-dynamic="3.18.2-GA" callerrev="0.9.10"/>
 				<caller organisation="org.asynchttpclient" name="async-http-client" conf="compile, runtime" rev="3.21.0-GA" rev-constraint-default="3.21.0-GA" rev-constraint-dynamic="3.21.0-GA" callerrev="2.0.24"/>
 				<artifacts>
-					<artifact name="javassist" type="bundle" ext="jar" status="successful" details="" size="734815" time="217" location="C:\Users\eischer\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.21.0-GA.jar">
+					<artifact name="javassist" type="bundle" ext="jar" status="no" details="" size="734815" time="0" location="C:\Users\eischer\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.21.0-GA.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar"/>
 					</artifact>
 				</artifacts>
@@ -111,49 +206,49 @@
 			</revision>
 		</module>
 		<module organisation="org.asynchttpclient" name="netty-resolver-dns">
-			<revision name="2.0.24" status="release" pubdate="20161108153539" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="75">
+			<revision name="2.0.24" status="release" pubdate="20161108153539" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="75">
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1577" time="129" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\ivy-2.0.24.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\ivy-2.0.24.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/asynchttpclient/netty-resolver-dns/2.0.24/netty-resolver-dns-2.0.24.pom"/>
+				<metadata-artifact status="no" details="" size="9768" time="0" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\ivy-2.0.24.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/asynchttpclient/netty-resolver-dns/2.0.24/netty-resolver-dns-2.0.24.pom"/>
 				<caller organisation="org.asynchttpclient" name="async-http-client" conf="compile, runtime" rev="2.0.24" rev-constraint-default="2.0.24" rev-constraint-dynamic="2.0.24" callerrev="2.0.24"/>
 				<artifacts>
-					<artifact name="netty-resolver-dns" type="jar" ext="jar" status="successful" details="" size="68869" time="150" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\jars\netty-resolver-dns-2.0.24.jar">
+					<artifact name="netty-resolver-dns" type="jar" ext="jar" status="no" details="" size="68869" time="0" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\jars\netty-resolver-dns-2.0.24.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/asynchttpclient/netty-resolver-dns/2.0.24/netty-resolver-dns-2.0.24.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.asynchttpclient" name="netty-codec-dns">
-			<revision name="2.0.24" status="release" pubdate="20161108153513" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="77">
+			<revision name="2.0.24" status="release" pubdate="20161108153513" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="77">
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1301" time="135" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-codec-dns\ivy-2.0.24.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-codec-dns\ivy-2.0.24.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/asynchttpclient/netty-codec-dns/2.0.24/netty-codec-dns-2.0.24.pom"/>
+				<metadata-artifact status="no" details="" size="9449" time="0" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-codec-dns\ivy-2.0.24.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/asynchttpclient/netty-codec-dns/2.0.24/netty-codec-dns-2.0.24.pom"/>
 				<caller organisation="org.asynchttpclient" name="netty-resolver-dns" conf="compile, runtime" rev="2.0.24" rev-constraint-default="2.0.24" rev-constraint-dynamic="2.0.24" callerrev="2.0.24"/>
 				<artifacts>
-					<artifact name="netty-codec-dns" type="jar" ext="jar" status="successful" details="" size="48963" time="147" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-codec-dns\jars\netty-codec-dns-2.0.24.jar">
+					<artifact name="netty-codec-dns" type="jar" ext="jar" status="no" details="" size="48963" time="0" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-codec-dns\jars\netty-codec-dns-2.0.24.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/asynchttpclient/netty-codec-dns/2.0.24/netty-codec-dns-2.0.24.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.asynchttpclient" name="netty-resolver">
-			<revision name="2.0.24" status="release" pubdate="20161108153525" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="76">
+			<revision name="2.0.24" status="release" pubdate="20161108153525" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="76">
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1300" time="125" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-resolver\ivy-2.0.24.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-resolver\ivy-2.0.24.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/asynchttpclient/netty-resolver/2.0.24/netty-resolver-2.0.24.pom"/>
+				<metadata-artifact status="no" details="" size="9448" time="0" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-resolver\ivy-2.0.24.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/asynchttpclient/netty-resolver/2.0.24/netty-resolver-2.0.24.pom"/>
 				<caller organisation="org.asynchttpclient" name="netty-resolver-dns" conf="compile, runtime" rev="2.0.24" rev-constraint-default="2.0.24" rev-constraint-dynamic="2.0.24" callerrev="2.0.24"/>
 				<artifacts>
-					<artifact name="netty-resolver" type="jar" ext="jar" status="successful" details="" size="24550" time="159" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-resolver\jars\netty-resolver-2.0.24.jar">
+					<artifact name="netty-resolver" type="jar" ext="jar" status="no" details="" size="24550" time="0" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\netty-resolver\jars\netty-resolver-2.0.24.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/asynchttpclient/netty-resolver/2.0.24/netty-resolver-2.0.24.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-transport-native-epoll">
-			<revision name="4.0.42.Final" status="release" pubdate="20161014150443" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="74">
+			<revision name="4.0.42.Final" status="release" pubdate="20161014150443" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="74">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="8912" time="129" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-transport-native-epoll\ivy-4.0.42.Final.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\io.netty\netty-transport-native-epoll\ivy-4.0.42.Final.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.0.42.Final/netty-transport-native-epoll-4.0.42.Final.pom"/>
+				<metadata-artifact status="no" details="" size="15695" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-transport-native-epoll\ivy-4.0.42.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.0.42.Final/netty-transport-native-epoll-4.0.42.Final.pom"/>
 				<caller organisation="com.typesafe.play" name="play-netty-server_2.11" conf="default, compile, runtime, master" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="2.5.14"/>
 				<caller organisation="org.asynchttpclient" name="async-http-client" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="2.0.24"/>
 				<artifacts>
-					<artifact name="netty-transport-native-epoll" type="jar" ext="jar" extra-classifier="linux-x86_64" status="successful" details="" size="150065" time="163" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.42.Final-linux-x86_64.jar">
+					<artifact name="netty-transport-native-epoll" type="jar" ext="jar" extra-classifier="linux-x86_64" status="no" details="" size="150065" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.42.Final-linux-x86_64.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.0.42.Final/netty-transport-native-epoll-4.0.42.Final-linux-x86_64.jar"/>
 					</artifact>
 				</artifacts>
@@ -168,13 +263,13 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-codec-http">
-			<revision name="4.0.42.Final" status="release" pubdate="20161014144047" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="70">
+			<revision name="4.0.42.Final" status="release" pubdate="20161014144047" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="70">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="1693" time="129" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-codec-http\ivy-4.0.42.Final.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\io.netty\netty-codec-http\ivy-4.0.42.Final.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.0.42.Final/netty-codec-http-4.0.42.Final.pom"/>
+				<metadata-artifact status="no" details="" size="14980" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-codec-http\ivy-4.0.42.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.0.42.Final/netty-codec-http-4.0.42.Final.pom"/>
 				<caller organisation="org.asynchttpclient" name="async-http-client" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="2.0.24"/>
 				<caller organisation="com.typesafe.netty" name="netty-reactive-streams-http" conf="compile, runtime" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="1.0.8"/>
 				<artifacts>
-					<artifact name="netty-codec-http" type="jar" ext="jar" status="successful" details="" size="454918" time="177" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.42.Final.jar">
+					<artifact name="netty-codec-http" type="jar" ext="jar" status="no" details="" size="454918" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.42.Final.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.0.42.Final/netty-codec-http-4.0.42.Final.jar"/>
 					</artifact>
 				</artifacts>
@@ -189,14 +284,14 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-handler">
-			<revision name="4.0.42.Final" status="release" pubdate="20161014144005" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="73">
+			<revision name="4.0.42.Final" status="release" pubdate="20161014144005" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="73">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="2398" time="148" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-handler\ivy-4.0.42.Final.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\io.netty\netty-handler\ivy-4.0.42.Final.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-handler/4.0.42.Final/netty-handler-4.0.42.Final.pom"/>
+				<metadata-artifact status="no" details="" size="15718" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-handler\ivy-4.0.42.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-handler/4.0.42.Final/netty-handler-4.0.42.Final.pom"/>
 				<caller organisation="io.netty" name="netty-codec-http" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="4.0.42.Final"/>
 				<caller organisation="io.netty" name="netty-codec-http" conf="compile, runtime" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="4.0.41.Final"/>
 				<caller organisation="com.typesafe.netty" name="netty-reactive-streams" conf="compile, runtime" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="1.0.8"/>
 				<artifacts>
-					<artifact name="netty-handler" type="jar" ext="jar" status="successful" details="" size="309359" time="153" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.42.Final.jar">
+					<artifact name="netty-handler" type="jar" ext="jar" status="no" details="" size="309359" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.42.Final.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-handler/4.0.42.Final/netty-handler-4.0.42.Final.jar"/>
 					</artifact>
 				</artifacts>
@@ -212,16 +307,16 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-codec">
-			<revision name="4.0.42.Final" status="release" pubdate="20161014143916" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="71">
+			<revision name="4.0.42.Final" status="release" pubdate="20161014143916" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="71">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="2240" time="135" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-codec\ivy-4.0.42.Final.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\io.netty\netty-codec\ivy-4.0.42.Final.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-codec/4.0.42.Final/netty-codec-4.0.42.Final.pom"/>
+				<metadata-artifact status="no" details="" size="15402" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-codec\ivy-4.0.42.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-codec/4.0.42.Final/netty-codec-4.0.42.Final.pom"/>
 				<caller organisation="org.asynchttpclient" name="netty-codec-dns" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="2.0.24"/>
 				<caller organisation="io.netty" name="netty-codec-http" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="4.0.42.Final"/>
 				<caller organisation="io.netty" name="netty-handler" conf="compile, runtime" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="4.0.41.Final"/>
 				<caller organisation="io.netty" name="netty-codec-http" conf="compile, runtime" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="4.0.41.Final"/>
 				<caller organisation="io.netty" name="netty-handler" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="4.0.42.Final"/>
 				<artifacts>
-					<artifact name="netty-codec" type="jar" ext="jar" status="successful" details="" size="148497" time="135" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.42.Final.jar">
+					<artifact name="netty-codec" type="jar" ext="jar" status="no" details="" size="148497" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.42.Final.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-codec/4.0.42.Final/netty-codec-4.0.42.Final.jar"/>
 					</artifact>
 				</artifacts>
@@ -236,9 +331,9 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-transport">
-			<revision name="4.0.42.Final" status="release" pubdate="20161014143817" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="72">
+			<revision name="4.0.42.Final" status="release" pubdate="20161014143817" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="72">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="1384" time="125" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-transport\ivy-4.0.42.Final.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\io.netty\netty-transport\ivy-4.0.42.Final.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-transport/4.0.42.Final/netty-transport-4.0.42.Final.pom"/>
+				<metadata-artifact status="no" details="" size="14715" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-transport\ivy-4.0.42.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-transport/4.0.42.Final/netty-transport-4.0.42.Final.pom"/>
 				<caller organisation="io.netty" name="netty-codec" conf="compile, runtime" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="4.0.41.Final"/>
 				<caller organisation="io.netty" name="netty-handler" conf="compile, runtime" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="4.0.41.Final"/>
 				<caller organisation="io.netty" name="netty-transport-native-epoll" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="4.0.42.Final"/>
@@ -247,7 +342,7 @@
 				<caller organisation="io.netty" name="netty-transport-native-epoll" conf="compile, runtime" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="4.0.41.Final"/>
 				<caller organisation="io.netty" name="netty-handler" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="4.0.42.Final"/>
 				<artifacts>
-					<artifact name="netty-transport" type="jar" ext="jar" status="successful" details="" size="375255" time="186" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.42.Final.jar">
+					<artifact name="netty-transport" type="jar" ext="jar" status="no" details="" size="375255" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.42.Final.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-transport/4.0.42.Final/netty-transport-4.0.42.Final.jar"/>
 					</artifact>
 				</artifacts>
@@ -263,21 +358,21 @@
 			</revision>
 		</module>
 		<module organisation="org.asynchttpclient" name="async-http-client-netty-utils">
-			<revision name="2.0.24" status="release" pubdate="20161108153551" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="67">
+			<revision name="2.0.24" status="release" pubdate="20161108153551" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="67">
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="639" time="121" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\async-http-client-netty-utils\ivy-2.0.24.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\async-http-client-netty-utils\ivy-2.0.24.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/asynchttpclient/async-http-client-netty-utils/2.0.24/async-http-client-netty-utils-2.0.24.pom"/>
+				<metadata-artifact status="no" details="" size="8366" time="0" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\async-http-client-netty-utils\ivy-2.0.24.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/asynchttpclient/async-http-client-netty-utils/2.0.24/async-http-client-netty-utils-2.0.24.pom"/>
 				<caller organisation="org.asynchttpclient" name="async-http-client" conf="compile, runtime" rev="2.0.24" rev-constraint-default="2.0.24" rev-constraint-dynamic="2.0.24" callerrev="2.0.24"/>
 				<artifacts>
-					<artifact name="async-http-client-netty-utils" type="jar" ext="jar" status="successful" details="" size="7291" time="143" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\async-http-client-netty-utils\jars\async-http-client-netty-utils-2.0.24.jar">
+					<artifact name="async-http-client-netty-utils" type="jar" ext="jar" status="no" details="" size="7291" time="0" location="C:\Users\eischer\.ivy2\cache\org.asynchttpclient\async-http-client-netty-utils\jars\async-http-client-netty-utils-2.0.24.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/asynchttpclient/async-http-client-netty-utils/2.0.24/async-http-client-netty-utils-2.0.24.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-buffer">
-			<revision name="4.0.42.Final" status="release" pubdate="20161014143709" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="68">
+			<revision name="4.0.42.Final" status="release" pubdate="20161014143709" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="68">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="1377" time="125" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-buffer\ivy-4.0.42.Final.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\io.netty\netty-buffer\ivy-4.0.42.Final.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-buffer/4.0.42.Final/netty-buffer-4.0.42.Final.pom"/>
+				<metadata-artifact status="no" details="" size="14709" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-buffer\ivy-4.0.42.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-buffer/4.0.42.Final/netty-buffer-4.0.42.Final.pom"/>
 				<caller organisation="io.netty" name="netty-handler" conf="compile, runtime" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="4.0.41.Final"/>
 				<caller organisation="io.netty" name="netty-transport-native-epoll" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="4.0.42.Final"/>
 				<caller organisation="org.asynchttpclient" name="async-http-client-netty-utils" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="2.0.24"/>
@@ -286,7 +381,7 @@
 				<caller organisation="io.netty" name="netty-transport-native-epoll" conf="compile, runtime" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="4.0.41.Final"/>
 				<caller organisation="io.netty" name="netty-handler" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="4.0.42.Final"/>
 				<artifacts>
-					<artifact name="netty-buffer" type="jar" ext="jar" status="successful" details="" size="222425" time="151" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.42.Final.jar">
+					<artifact name="netty-buffer" type="jar" ext="jar" status="no" details="" size="222425" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.42.Final.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-buffer/4.0.42.Final/netty-buffer-4.0.42.Final.jar"/>
 					</artifact>
 				</artifacts>
@@ -302,16 +397,16 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-common">
-			<revision name="4.0.42.Final" status="release" pubdate="20161014143516" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="69">
+			<revision name="4.0.42.Final" status="release" pubdate="20161014143516" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="69">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="6854" time="138" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-common\ivy-4.0.42.Final.xml" searched="true" original-local-location="C:\Users\eischer\.ivy2\cache\io.netty\netty-common\ivy-4.0.42.Final.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-common/4.0.42.Final/netty-common-4.0.42.Final.pom"/>
+				<metadata-artifact status="no" details="" size="16649" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-common\ivy-4.0.42.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-common/4.0.42.Final/netty-common-4.0.42.Final.pom"/>
 				<caller organisation="org.asynchttpclient" name="netty-resolver" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="2.0.24"/>
 				<caller organisation="io.netty" name="netty-transport-native-epoll" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="4.0.42.Final"/>
 				<caller organisation="io.netty" name="netty-buffer" conf="compile, runtime" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="4.0.41.Final"/>
 				<caller organisation="io.netty" name="netty-buffer" conf="compile, runtime" rev="4.0.42.Final" rev-constraint-default="4.0.42.Final" rev-constraint-dynamic="4.0.42.Final" callerrev="4.0.42.Final"/>
 				<caller organisation="io.netty" name="netty-transport-native-epoll" conf="compile, runtime" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="4.0.41.Final"/>
 				<artifacts>
-					<artifact name="netty-common" type="jar" ext="jar" status="successful" details="" size="529689" time="169" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.42.Final.jar">
+					<artifact name="netty-common" type="jar" ext="jar" status="no" details="" size="529689" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.42.Final.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-common/4.0.42.Final/netty-common-4.0.42.Final.jar"/>
 					</artifact>
 				</artifacts>
@@ -341,6 +436,7 @@
 			<revision name="2.5.14" status="release" pubdate="20170407002950" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="41">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
 				<metadata-artifact status="no" details="" size="6947" time="0" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-java_2.11\ivy-2.5.14.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java_2.11/2.5.14/play-java_2.11-2.5.14.pom"/>
+				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="default, compile, runtime, master" rev="2.5.14" rev-constraint-default="2.5.14" rev-constraint-dynamic="2.5.14" callerrev="2.5.14"/>
 				<caller organisation="com.typesafe.play" name="play-java-ws_2.11" conf="default, compile, runtime, master" rev="2.5.14" rev-constraint-default="2.5.14" rev-constraint-dynamic="2.5.14" callerrev="2.5.14"/>
 				<caller organisation="com.heig-vd.ifc" name="switchmonitor_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="2.5.14" rev-constraint-default="2.5.14" rev-constraint-dynamic="2.5.14" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
@@ -496,7 +592,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-test_2.11">
-			<revision name="2.5.14" status="release" pubdate="20170407002845" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="84">
+			<revision name="2.5.14" status="release" pubdate="20170407002845" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="92">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
 				<metadata-artifact status="no" details="" size="4328" time="0" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play-test_2.11\ivy-2.5.14.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-test_2.11/2.5.14/play-test_2.11-2.5.14.pom"/>
 				<caller organisation="com.heig-vd.ifc" name="switchmonitor_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="2.5.14" rev-constraint-default="2.5.14" rev-constraint-dynamic="2.5.14" callerrev="1.0-SNAPSHOT"/>
@@ -508,7 +604,7 @@
 			</revision>
 		</module>
 		<module organisation="org.fluentlenium" name="fluentlenium-core">
-			<revision name="0.10.9" status="release" pubdate="20151120184516" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FluentLenium/FluentLenium" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="103">
+			<revision name="0.10.9" status="release" pubdate="20151120184516" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FluentLenium/FluentLenium" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="111">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6145" time="0" location="C:\Users\eischer\.ivy2\cache\org.fluentlenium\fluentlenium-core\ivy-0.10.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/fluentlenium/fluentlenium-core/0.10.9/fluentlenium-core-0.10.9.pom"/>
 				<caller organisation="com.typesafe.play" name="play-test_2.11" conf="default, compile, runtime, master" rev="0.10.9" rev-constraint-default="0.10.9" rev-constraint-dynamic="0.10.9" callerrev="2.5.14"/>
@@ -520,7 +616,7 @@
 			</revision>
 		</module>
 		<module organisation="org.seleniumhq.selenium" name="selenium-java">
-			<revision name="2.48.2" status="release" pubdate="20151009221201" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="104">
+			<revision name="2.48.2" status="release" pubdate="20151009221201" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="112">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6160" time="0" location="C:\Users\eischer\.ivy2\cache\org.seleniumhq.selenium\selenium-java\ivy-2.48.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-java/2.48.2/selenium-java-2.48.2.pom"/>
 				<caller organisation="org.fluentlenium" name="fluentlenium-core" conf="compile, runtime" rev="2.48.2" rev-constraint-default="2.48.2" rev-constraint-dynamic="2.48.2" callerrev="0.10.9"/>
@@ -532,7 +628,7 @@
 			</revision>
 		</module>
 		<module organisation="org.seleniumhq.selenium" name="selenium-leg-rc">
-			<revision name="2.48.2" status="release" pubdate="20151009221141" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="121">
+			<revision name="2.48.2" status="release" pubdate="20151009221141" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="129">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="5100" time="0" location="C:\Users\eischer\.ivy2\cache\org.seleniumhq.selenium\selenium-leg-rc\ivy-2.48.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-leg-rc/2.48.2/selenium-leg-rc-2.48.2.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-java" conf="compile, runtime" rev="2.48.2" rev-constraint-default="2.48.2" rev-constraint-dynamic="2.48.2" callerrev="2.48.2"/>
@@ -544,7 +640,7 @@
 			</revision>
 		</module>
 		<module organisation="org.seleniumhq.selenium" name="selenium-safari-driver">
-			<revision name="2.48.2" status="release" pubdate="20151009221119" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="118">
+			<revision name="2.48.2" status="release" pubdate="20151009221119" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="126">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="4998" time="0" location="C:\Users\eischer\.ivy2\cache\org.seleniumhq.selenium\selenium-safari-driver\ivy-2.48.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-safari-driver/2.48.2/selenium-safari-driver-2.48.2.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-java" conf="compile, runtime" rev="2.48.2" rev-constraint-default="2.48.2" rev-constraint-dynamic="2.48.2" callerrev="2.48.2"/>
@@ -556,7 +652,7 @@
 			</revision>
 		</module>
 		<module organisation="org.webbitserver" name="webbit">
-			<revision name="0.4.14" status="release" pubdate="20120713143639" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webbitserver.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="119">
+			<revision name="0.4.14" status="release" pubdate="20120713143639" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webbitserver.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="127">
 				<license name="BSD License" url="http://www.opensource.org/licenses/bsd-license"/>
 				<metadata-artifact status="no" details="" size="3538" time="0" location="C:\Users\eischer\.ivy2\cache\org.webbitserver\webbit\ivy-0.4.14.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/webbitserver/webbit/0.4.14/webbit-0.4.14.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-java" conf="compile, runtime" rev="0.4.14" rev-constraint-default="0.4.14" rev-constraint-dynamic="0.4.14" callerrev="2.48.2"/>
@@ -569,7 +665,7 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty">
-			<revision name="3.5.2.Final" status="release" pubdate="20120705105746" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://netty.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="120">
+			<revision name="3.5.2.Final" status="release" pubdate="20120705105746" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://netty.io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="128">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="6706" time="0" location="C:\Users\eischer\.ivy2\cache\io.netty\netty\ivy-3.5.2.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty/3.5.2.Final/netty-3.5.2.Final.pom"/>
 				<caller organisation="org.webbitserver" name="webbit" conf="compile, runtime" rev="3.5.2.Final" rev-constraint-default="3.5.2.Final" rev-constraint-dynamic="3.5.2.Final" callerrev="0.4.14"/>
@@ -581,7 +677,7 @@
 			</revision>
 		</module>
 		<module organisation="org.seleniumhq.selenium" name="selenium-ie-driver">
-			<revision name="2.48.2" status="release" pubdate="20151009221020" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="117">
+			<revision name="2.48.2" status="release" pubdate="20151009221020" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="125">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="5134" time="0" location="C:\Users\eischer\.ivy2\cache\org.seleniumhq.selenium\selenium-ie-driver\ivy-2.48.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-ie-driver/2.48.2/selenium-ie-driver-2.48.2.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-java" conf="compile, runtime" rev="2.48.2" rev-constraint-default="2.48.2" rev-constraint-dynamic="2.48.2" callerrev="2.48.2"/>
@@ -593,7 +689,7 @@
 			</revision>
 		</module>
 		<module organisation="org.seleniumhq.selenium" name="selenium-firefox-driver">
-			<revision name="2.48.2" status="release" pubdate="20151009221002" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="116">
+			<revision name="2.48.2" status="release" pubdate="20151009221002" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="124">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="5143" time="0" location="C:\Users\eischer\.ivy2\cache\org.seleniumhq.selenium\selenium-firefox-driver\ivy-2.48.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-firefox-driver/2.48.2/selenium-firefox-driver-2.48.2.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-java" conf="compile, runtime" rev="2.48.2" rev-constraint-default="2.48.2" rev-constraint-dynamic="2.48.2" callerrev="2.48.2"/>
@@ -605,7 +701,7 @@
 			</revision>
 		</module>
 		<module organisation="org.seleniumhq.selenium" name="selenium-htmlunit-driver">
-			<revision name="2.48.2" status="release" pubdate="20151009221101" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="114">
+			<revision name="2.48.2" status="release" pubdate="20151009221101" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="122">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="5159" time="0" location="C:\Users\eischer\.ivy2\cache\org.seleniumhq.selenium\selenium-htmlunit-driver\ivy-2.48.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-htmlunit-driver/2.48.2/selenium-htmlunit-driver-2.48.2.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-java" conf="compile, runtime" rev="2.48.2" rev-constraint-default="2.48.2" rev-constraint-dynamic="2.48.2" callerrev="2.48.2"/>
@@ -617,7 +713,7 @@
 			</revision>
 		</module>
 		<module organisation="org.seleniumhq.selenium" name="selenium-support">
-			<revision name="2.48.2" status="release" pubdate="20151009221040" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="115">
+			<revision name="2.48.2" status="release" pubdate="20151009221040" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="123">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="5076" time="0" location="C:\Users\eischer\.ivy2\cache\org.seleniumhq.selenium\selenium-support\ivy-2.48.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-support/2.48.2/selenium-support-2.48.2.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-htmlunit-driver" conf="compile, runtime" rev="2.48.2" rev-constraint-default="2.48.2" rev-constraint-dynamic="2.48.2" callerrev="2.48.2"/>
@@ -630,7 +726,7 @@
 			</revision>
 		</module>
 		<module organisation="org.seleniumhq.selenium" name="selenium-edge-driver">
-			<revision name="2.48.2" status="release" pubdate="20151009220941" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="113">
+			<revision name="2.48.2" status="release" pubdate="20151009220941" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="121">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="5137" time="0" location="C:\Users\eischer\.ivy2\cache\org.seleniumhq.selenium\selenium-edge-driver\ivy-2.48.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-edge-driver/2.48.2/selenium-edge-driver-2.48.2.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-java" conf="compile, runtime" rev="2.48.2" rev-constraint-default="2.48.2" rev-constraint-dynamic="2.48.2" callerrev="2.48.2"/>
@@ -642,7 +738,7 @@
 			</revision>
 		</module>
 		<module organisation="org.seleniumhq.selenium" name="selenium-chrome-driver">
-			<revision name="2.48.2" status="release" pubdate="20151009220924" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="105">
+			<revision name="2.48.2" status="release" pubdate="20151009220924" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="113">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="4855" time="0" location="C:\Users\eischer\.ivy2\cache\org.seleniumhq.selenium\selenium-chrome-driver\ivy-2.48.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-chrome-driver/2.48.2/selenium-chrome-driver-2.48.2.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-java" conf="compile, runtime" rev="2.48.2" rev-constraint-default="2.48.2" rev-constraint-dynamic="2.48.2" callerrev="2.48.2"/>
@@ -654,7 +750,7 @@
 			</revision>
 		</module>
 		<module organisation="org.seleniumhq.selenium" name="selenium-remote-driver">
-			<revision name="2.48.2" status="release" pubdate="20151009220902" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="106">
+			<revision name="2.48.2" status="release" pubdate="20151009220902" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="114">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="5855" time="0" location="C:\Users\eischer\.ivy2\cache\org.seleniumhq.selenium\selenium-remote-driver\ivy-2.48.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-remote-driver/2.48.2/selenium-remote-driver-2.48.2.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-edge-driver" conf="compile, runtime" rev="2.48.2" rev-constraint-default="2.48.2" rev-constraint-dynamic="2.48.2" callerrev="2.48.2"/>
@@ -672,7 +768,7 @@
 			</revision>
 		</module>
 		<module organisation="net.java.dev.jna" name="jna-platform">
-			<revision name="4.1.0" status="release" pubdate="20140306165822" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twall/jna" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="112">
+			<revision name="4.1.0" status="release" pubdate="20140306165822" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twall/jna" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="120">
 				<license name="LGPL, version 2.1" url="http://www.gnu.org/licenses/licenses.html"/>
 				<license name="ASL, version 2" url="http://www.apache.org/licenses/"/>
 				<metadata-artifact status="no" details="" size="2766" time="0" location="C:\Users\eischer\.ivy2\cache\net.java.dev.jna\jna-platform\ivy-4.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.pom"/>
@@ -686,7 +782,7 @@
 			</revision>
 		</module>
 		<module organisation="net.java.dev.jna" name="jna">
-			<revision name="4.1.0" status="release" pubdate="20140306165605" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twall/jna" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="111">
+			<revision name="4.1.0" status="release" pubdate="20140306165605" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twall/jna" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="119">
 				<license name="LGPL, version 2.1" url="http://www.gnu.org/licenses/licenses.html"/>
 				<license name="ASL, version 2" url="http://www.apache.org/licenses/"/>
 				<metadata-artifact status="no" details="" size="2565" time="0" location="C:\Users\eischer\.ivy2\cache\net.java.dev.jna\jna\ivy-4.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/java/dev/jna/jna/4.1.0/jna-4.1.0.pom"/>
@@ -701,7 +797,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-exec">
-			<revision name="1.3" status="release" pubdate="20141103012715" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-exec/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="110">
+			<revision name="1.3" status="release" pubdate="20141103012715" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-exec/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="118">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="10474" time="0" location="C:\Users\eischer\.ivy2\cache\org.apache.commons\commons-exec\ivy-1.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-exec/1.3/commons-exec-1.3.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-edge-driver" conf="compile, runtime" rev="1.3" rev-constraint-default="1.3" rev-constraint-dynamic="1.3" callerrev="2.48.2"/>
@@ -715,7 +811,7 @@
 			</revision>
 		</module>
 		<module organisation="org.seleniumhq.selenium" name="selenium-api">
-			<revision name="2.48.2" status="release" pubdate="20151009220836" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="109">
+			<revision name="2.48.2" status="release" pubdate="20151009220836" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="117">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="5137" time="0" location="C:\Users\eischer\.ivy2\cache\org.seleniumhq.selenium\selenium-api\ivy-2.48.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-api/2.48.2/selenium-api-2.48.2.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-remote-driver" conf="compile, runtime" rev="2.48.2" rev-constraint-default="2.48.2" rev-constraint-dynamic="2.48.2" callerrev="2.48.2"/>
@@ -727,7 +823,7 @@
 			</revision>
 		</module>
 		<module organisation="com.google.code.gson" name="gson">
-			<revision name="2.3.1" status="release" pubdate="20141120104214" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/google-gson/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="108">
+			<revision name="2.3.1" status="release" pubdate="20141120104214" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/google-gson/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="116">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3420" time="0" location="C:\Users\eischer\.ivy2\cache\com.google.code.gson\gson\ivy-2.3.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/gson/gson/2.3.1/gson-2.3.1.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-remote-driver" conf="compile, runtime" rev="2.3.1" rev-constraint-default="2.3.1" rev-constraint-dynamic="2.3.1" callerrev="2.48.2"/>
@@ -740,7 +836,7 @@
 			</revision>
 		</module>
 		<module organisation="cglib" name="cglib-nodep">
-			<revision name="2.1_3" status="release" pubdate="20051108231406" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://cglib.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="107">
+			<revision name="2.1_3" status="release" pubdate="20051108231406" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://cglib.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="115">
 				<metadata-artifact status="no" details="" size="2370" time="0" location="C:\Users\eischer\.ivy2\cache\cglib\cglib-nodep\ivy-2.1_3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/cglib/cglib-nodep/2.1_3/cglib-nodep-2.1_3.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-remote-driver" conf="compile, runtime" rev="2.1_3" rev-constraint-default="2.1_3" rev-constraint-dynamic="2.1_3" callerrev="2.48.2"/>
 				<artifacts>
@@ -751,7 +847,7 @@
 			</revision>
 		</module>
 		<module organisation="net.sourceforge.htmlunit" name="htmlunit">
-			<revision name="2.20" status="release" pubdate="20160228171725" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://htmlunit.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="89">
+			<revision name="2.20" status="release" pubdate="20160228171725" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://htmlunit.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="97">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7809" time="0" location="C:\Users\eischer\.ivy2\cache\net.sourceforge.htmlunit\htmlunit\ivy-2.20.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sourceforge/htmlunit/htmlunit/2.20/htmlunit-2.20.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-htmlunit-driver" conf="compile, runtime" rev="2.18" rev-constraint-default="2.18" rev-constraint-dynamic="2.18" callerrev="2.48.2"/>
@@ -770,7 +866,7 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.jetty.websocket" name="websocket-client">
-			<revision name="9.2.15.v20160210" status="release" pubdate="20160210230558" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="98">
+			<revision name="9.2.15.v20160210" status="release" pubdate="20160210230558" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="106">
 				<license name="Apache Software License - Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
 				<metadata-artifact status="no" details="" size="13773" time="0" location="C:\Users\eischer\.ivy2\cache\org.eclipse.jetty.websocket\websocket-client\ivy-9.2.15.v20160210.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/websocket/websocket-client/9.2.15.v20160210/websocket-client-9.2.15.v20160210.pom"/>
@@ -783,7 +879,7 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.jetty.websocket" name="websocket-common">
-			<revision name="9.2.15.v20160210" status="release" pubdate="20160210230502" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="101">
+			<revision name="9.2.15.v20160210" status="release" pubdate="20160210230502" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="109">
 				<license name="Apache Software License - Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
 				<metadata-artifact status="no" details="" size="13493" time="0" location="C:\Users\eischer\.ivy2\cache\org.eclipse.jetty.websocket\websocket-common\ivy-9.2.15.v20160210.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/websocket/websocket-common/9.2.15.v20160210/websocket-common-9.2.15.v20160210.pom"/>
@@ -796,7 +892,7 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.jetty.websocket" name="websocket-api">
-			<revision name="9.2.15.v20160210" status="release" pubdate="20160210230421" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="102">
+			<revision name="9.2.15.v20160210" status="release" pubdate="20160210230421" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="110">
 				<license name="Apache Software License - Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
 				<metadata-artifact status="no" details="" size="12950" time="0" location="C:\Users\eischer\.ivy2\cache\org.eclipse.jetty.websocket\websocket-api\ivy-9.2.15.v20160210.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/websocket/websocket-api/9.2.15.v20160210/websocket-api-9.2.15.v20160210.pom"/>
@@ -809,7 +905,7 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.jetty" name="jetty-io">
-			<revision name="9.2.15.v20160210" status="release" pubdate="20160210225127" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="100">
+			<revision name="9.2.15.v20160210" status="release" pubdate="20160210225127" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="108">
 				<license name="Apache Software License - Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
 				<metadata-artifact status="no" details="" size="11935" time="0" location="C:\Users\eischer\.ivy2\cache\org.eclipse.jetty\jetty-io\ivy-9.2.15.v20160210.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-io/9.2.15.v20160210/jetty-io-9.2.15.v20160210.pom"/>
@@ -823,7 +919,7 @@
 			</revision>
 		</module>
 		<module organisation="org.eclipse.jetty" name="jetty-util">
-			<revision name="9.2.15.v20160210" status="release" pubdate="20160210225005" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="99">
+			<revision name="9.2.15.v20160210" status="release" pubdate="20160210225005" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="107">
 				<license name="Apache Software License - Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="Eclipse Public License - Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
 				<metadata-artifact status="no" details="" size="12208" time="0" location="C:\Users\eischer\.ivy2\cache\org.eclipse.jetty\jetty-util\ivy-9.2.15.v20160210.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/9.2.15.v20160210/jetty-util-9.2.15.v20160210.pom"/>
@@ -838,7 +934,7 @@
 			</revision>
 		</module>
 		<module organisation="net.sourceforge.cssparser" name="cssparser">
-			<revision name="0.9.18" status="release" pubdate="20151027195927" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://cssparser.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="95">
+			<revision name="0.9.18" status="release" pubdate="20151027195927" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://cssparser.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="103">
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/lgpl.txt"/>
 				<metadata-artifact status="no" details="" size="3810" time="0" location="C:\Users\eischer\.ivy2\cache\net.sourceforge.cssparser\cssparser\ivy-0.9.18.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sourceforge/cssparser/cssparser/0.9.18/cssparser-0.9.18.pom"/>
 				<caller organisation="net.sourceforge.htmlunit" name="htmlunit" conf="compile, runtime" rev="0.9.18" rev-constraint-default="0.9.18" rev-constraint-dynamic="0.9.18" callerrev="2.20"/>
@@ -850,7 +946,7 @@
 			</revision>
 		</module>
 		<module organisation="org.w3c.css" name="sac">
-			<revision name="1.3" status="release" pubdate="20080323054250" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.w3.org/Style/CSS/SAC/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="96">
+			<revision name="1.3" status="release" pubdate="20080323054250" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.w3.org/Style/CSS/SAC/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="104">
 				<license name="The W3C Software License" url="http://www.w3.org/Consortium/Legal/copyright-software-19980720"/>
 				<metadata-artifact status="no" details="" size="2541" time="0" location="C:\Users\eischer\.ivy2\cache\org.w3c.css\sac\ivy-1.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/w3c/css/sac/1.3/sac-1.3.pom"/>
 				<caller organisation="net.sourceforge.cssparser" name="cssparser" conf="compile, runtime" rev="1.3" rev-constraint-default="1.3" rev-constraint-dynamic="1.3" callerrev="0.9.18"/>
@@ -862,7 +958,7 @@
 			</revision>
 		</module>
 		<module organisation="net.sourceforge.nekohtml" name="nekohtml">
-			<revision name="1.9.22" status="release" pubdate="20150417144242" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://nekohtml.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="94">
+			<revision name="1.9.22" status="release" pubdate="20150417144242" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://nekohtml.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="102">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="2727" time="0" location="C:\Users\eischer\.ivy2\cache\net.sourceforge.nekohtml\nekohtml\ivy-1.9.22.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.pom"/>
 				<caller organisation="net.sourceforge.htmlunit" name="htmlunit" conf="compile, runtime" rev="1.9.22" rev-constraint-default="1.9.22" rev-constraint-dynamic="1.9.22" callerrev="2.20"/>
@@ -874,7 +970,7 @@
 			</revision>
 		</module>
 		<module organisation="net.sourceforge.htmlunit" name="htmlunit-core-js">
-			<revision name="2.17" status="release" pubdate="20150603121255" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://htmlunit.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="93">
+			<revision name="2.17" status="release" pubdate="20150603121255" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://htmlunit.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="101">
 				<license name="Mozilla Public License version 2.0" url="http://www.mozilla.org/MPL/2.0/"/>
 				<metadata-artifact status="no" details="" size="2669" time="0" location="C:\Users\eischer\.ivy2\cache\net.sourceforge.htmlunit\htmlunit-core-js\ivy-2.17.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sourceforge/htmlunit/htmlunit-core-js/2.17/htmlunit-core-js-2.17.pom"/>
 				<caller organisation="net.sourceforge.htmlunit" name="htmlunit" conf="compile, runtime" rev="2.17" rev-constraint-default="2.17" rev-constraint-dynamic="2.17" callerrev="2.20"/>
@@ -886,7 +982,7 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.httpcomponents" name="httpmime">
-			<revision name="4.5.2" status="release" pubdate="20160221170652" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hc.apache.org/httpcomponents-client" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="92">
+			<revision name="4.5.2" status="release" pubdate="20160221170652" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hc.apache.org/httpcomponents-client" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="100">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="9406" time="0" location="C:\Users\eischer\.ivy2\cache\org.apache.httpcomponents\httpmime\ivy-4.5.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2.pom"/>
 				<caller organisation="net.sourceforge.htmlunit" name="htmlunit" conf="compile, runtime" rev="4.5.2" rev-constraint-default="4.5.2" rev-constraint-dynamic="4.5.2" callerrev="2.20"/>
@@ -969,7 +1065,7 @@
 			</revision>
 		</module>
 		<module organisation="xalan" name="xalan">
-			<revision name="2.7.2" status="release" pubdate="20140724204830" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://xml.apache.org/xalan-j/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="90">
+			<revision name="2.7.2" status="release" pubdate="20140724204830" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://xml.apache.org/xalan-j/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="98">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3213" time="0" location="C:\Users\eischer\.ivy2\cache\xalan\xalan\ivy-2.7.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xalan/xalan/2.7.2/xalan-2.7.2.pom"/>
 				<caller organisation="net.sourceforge.htmlunit" name="htmlunit" conf="compile, runtime" rev="2.7.2" rev-constraint-default="2.7.2" rev-constraint-dynamic="2.7.2" callerrev="2.20"/>
@@ -981,7 +1077,7 @@
 			</revision>
 		</module>
 		<module organisation="xalan" name="serializer">
-			<revision name="2.7.2" status="release" pubdate="20140724204454" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://xml.apache.org/xalan-j/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="91">
+			<revision name="2.7.2" status="release" pubdate="20140724204454" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://xml.apache.org/xalan-j/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="99">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3023" time="0" location="C:\Users\eischer\.ivy2\cache\xalan\serializer\ivy-2.7.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xalan/serializer/2.7.2/serializer-2.7.2.pom"/>
 				<caller organisation="xalan" name="xalan" conf="compile, runtime" rev="2.7.2" rev-constraint-default="2.7.2" rev-constraint-dynamic="2.7.2" callerrev="2.7.2"/>
@@ -1079,6 +1175,7 @@
 				<caller organisation="com.typesafe.play" name="play-ws_2.11" conf="compile, runtime" rev="2.5.14" rev-constraint-default="2.5.14" rev-constraint-dynamic="2.5.14" callerrev="2.5.14"/>
 				<caller organisation="com.typesafe.play" name="play-java_2.11" conf="default, compile, runtime, master" rev="2.5.14" rev-constraint-default="2.5.14" rev-constraint-dynamic="2.5.14" callerrev="2.5.14"/>
 				<caller organisation="com.typesafe.play" name="play-java-ws_2.11" conf="default, compile, runtime, master" rev="2.5.14" rev-constraint-default="2.5.14" rev-constraint-dynamic="2.5.14" callerrev="2.5.14"/>
+				<caller organisation="com.typesafe.play" name="play-jdbc-api_2.11" conf="compile, runtime" rev="2.5.14" rev-constraint-default="2.5.14" rev-constraint-dynamic="2.5.14" callerrev="2.5.14"/>
 				<artifacts>
 					<artifact name="play_2.11" type="jar" ext="jar" status="no" details="" size="4112455" time="0" location="C:\Users\eischer\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.5.14.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play_2.11/2.5.14/play_2.11-2.5.14.jar"/>
@@ -1096,6 +1193,7 @@
 				<caller organisation="com.typesafe.play" name="play-ws_2.11" conf="compile, runtime" rev="19.0" rev-constraint-default="19.0" rev-constraint-dynamic="19.0" callerrev="2.5.14"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-remote-driver" conf="compile, runtime" rev="18.0" rev-constraint-default="18.0" rev-constraint-dynamic="18.0" callerrev="2.48.2"/>
 				<caller organisation="com.typesafe.play" name="play-java_2.11" conf="default, compile, runtime, master" rev="19.0" rev-constraint-default="19.0" rev-constraint-dynamic="19.0" callerrev="2.5.14"/>
+				<caller organisation="com.jolbox" name="bonecp" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="0.8.0.RELEASE"/>
 				<caller organisation="com.typesafe.play" name="play-java-ws_2.11" conf="default, compile, runtime, master" rev="19.0" rev-constraint-default="19.0" rev-constraint-dynamic="19.0" callerrev="2.5.14"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-api" conf="compile, runtime" rev="18.0" rev-constraint-default="18.0" rev-constraint-dynamic="18.0" callerrev="2.48.2"/>
 				<artifacts>
@@ -1109,6 +1207,12 @@
 				<metadata-artifact status="no" details="" size="5672" time="0" location="C:\Users\eischer\.ivy2\cache\com.google.guava\guava\ivy-16.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/guava/guava/16.0.1/guava-16.0.1.pom"/>
 				<evicted-by rev="19.0"/>
 				<caller organisation="com.google.inject" name="guice" conf="compile, runtime" rev="16.0.1" rev-constraint-default="16.0.1" rev-constraint-dynamic="16.0.1" callerrev="4.0"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+			<revision name="15.0" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<evicted-by rev="19.0"/>
+				<caller organisation="com.jolbox" name="bonecp" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="0.8.0.RELEASE"/>
 				<artifacts>
 				</artifacts>
 			</revision>
@@ -1402,27 +1506,56 @@
 				<caller organisation="com.typesafe.play" name="play_2.11" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.5.14"/>
 				<caller organisation="org.slf4j" name="jul-to-slf4j" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="1.7.21"/>
 				<caller organisation="org.asynchttpclient" name="async-http-client" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.24"/>
+				<caller organisation="com.zaxxer" name="HikariCP" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.5.1"/>
+				<caller organisation="com.jolbox" name="bonecp" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="0.8.0.RELEASE"/>
 				<artifacts>
 				</artifacts>
 			</revision>
 			<revision name="1.7.25" status="release" pubdate="20170316173632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="62">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="5250" time="0" location="C:\Users\eischer\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom"/>
+				<caller organisation="org.asynchttpclient" name="async-http-client-netty-utils" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.24"/>
+				<caller organisation="org.slf4j" name="jul-to-slf4j" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="1.7.21"/>
+				<caller organisation="org.asynchttpclient" name="async-http-client" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.24"/>
+				<caller organisation="com.zaxxer" name="HikariCP" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.5.1"/>
+				<caller organisation="ch.qos.logback" name="logback-classic" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="1.2.3"/>
 				<caller organisation="org.asynchttpclient" name="netty-resolver" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.24"/>
 				<caller organisation="org.asynchttpclient" name="netty-codec-dns" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.24"/>
+				<caller organisation="com.googlecode.usc" name="jdbcdslog" conf="compile, runtime" rev="1.5.10" rev-constraint-default="1.5.10" rev-constraint-dynamic="1.5.10" callerrev="1.0.6.2"/>
 				<caller organisation="org.slf4j" name="jcl-over-slf4j" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="1.7.21"/>
-				<caller organisation="org.asynchttpclient" name="async-http-client-netty-utils" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.24"/>
 				<caller organisation="com.typesafe.play" name="play-netty-utils" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.5.14"/>
 				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.11" conf="compile, runtime" rev="1.7.16" rev-constraint-default="1.7.16" rev-constraint-dynamic="1.7.16" callerrev="2.4.17"/>
 				<caller organisation="org.asynchttpclient" name="netty-resolver-dns" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.24"/>
 				<caller organisation="com.typesafe.play" name="play_2.11" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.5.14"/>
-				<caller organisation="org.slf4j" name="jul-to-slf4j" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="1.7.21"/>
-				<caller organisation="org.asynchttpclient" name="async-http-client" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.24"/>
-				<caller organisation="ch.qos.logback" name="logback-classic" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="1.2.3"/>
+				<caller organisation="com.jolbox" name="bonecp" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="0.8.0.RELEASE"/>
 				<artifacts>
 					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="41203" time="0" location="C:\Users\eischer\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.25.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar"/>
 					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="1.5.10" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<evicted-by rev="1.7.25"/>
+				<caller organisation="org.asynchttpclient" name="async-http-client-netty-utils" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.24"/>
+				<caller organisation="org.slf4j" name="jul-to-slf4j" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="1.7.21"/>
+				<caller organisation="org.asynchttpclient" name="async-http-client" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.24"/>
+				<caller organisation="com.zaxxer" name="HikariCP" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.5.1"/>
+				<caller organisation="org.asynchttpclient" name="netty-resolver" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.24"/>
+				<caller organisation="org.asynchttpclient" name="netty-codec-dns" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.24"/>
+				<caller organisation="com.googlecode.usc" name="jdbcdslog" conf="compile, runtime" rev="1.5.10" rev-constraint-default="1.5.10" rev-constraint-dynamic="1.5.10" callerrev="1.0.6.2"/>
+				<caller organisation="org.slf4j" name="jcl-over-slf4j" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="1.7.21"/>
+				<caller organisation="com.typesafe.play" name="play-netty-utils" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.5.14"/>
+				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.11" conf="compile, runtime" rev="1.7.16" rev-constraint-default="1.7.16" rev-constraint-dynamic="1.7.16" callerrev="2.4.17"/>
+				<caller organisation="org.asynchttpclient" name="netty-resolver-dns" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.24"/>
+				<caller organisation="com.typesafe.play" name="play_2.11" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.5.14"/>
+				<caller organisation="com.jolbox" name="bonecp" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="0.8.0.RELEASE"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+			<revision name="1.7.2" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<evicted-by rev="1.7.25"/>
+				<caller organisation="com.jolbox" name="bonecp" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="0.8.0.RELEASE"/>
+				<artifacts>
 				</artifacts>
 			</revision>
 			<revision name="1.7.16" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
@@ -1640,7 +1773,7 @@
 			</revision>
 		</module>
 		<module organisation="com.novocode" name="junit-interface">
-			<revision name="0.11" status="release" pubdate="20140814102745" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/sbt/junit-interface/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="87">
+			<revision name="0.11" status="release" pubdate="20140814102745" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/sbt/junit-interface/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="95">
 				<license name="Two-clause BSD-style license" url="http://github.com/sbt/junit-interface/blob/master/LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="2899" time="0" location="C:\Users\eischer\.ivy2\cache\com.novocode\junit-interface\ivy-0.11.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/novocode/junit-interface/0.11/junit-interface-0.11.pom"/>
 				<caller organisation="com.typesafe.play" name="play-test_2.11" conf="default, compile, runtime, master" rev="0.11" rev-constraint-default="0.11" rev-constraint-dynamic="0.11" callerrev="2.5.14"/>
@@ -1652,7 +1785,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-sbt" name="test-interface">
-			<revision name="1.0" status="release" pubdate="20130628184435" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-sbt.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="88">
+			<revision name="1.0" status="release" pubdate="20130628184435" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-sbt.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="96">
 				<license name="BSD" url="https://github.com/sbt/test-interface/blob/master/LICENSE"/>
 				<metadata-artifact status="no" details="" size="2712" time="0" location="C:\Users\eischer\.ivy2\cache\org.scala-sbt\test-interface\ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="file:////C:/Program%20Files/Play/repository/org.scala-sbt/test-interface/1.0/ivys/ivy.xml"/>
 				<caller organisation="com.novocode" name="junit-interface" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="0.11"/>
@@ -1740,7 +1873,7 @@
 			</revision>
 		</module>
 		<module organisation="commons-io" name="commons-io">
-			<revision name="2.4" status="release" pubdate="20120613002206" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="97">
+			<revision name="2.4" status="release" pubdate="20120613002206" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="105">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="8783" time="0" location="C:\Users\eischer\.ivy2\cache\commons-io\commons-io\ivy-2.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.pom"/>
 				<caller organisation="org.seleniumhq.selenium" name="selenium-edge-driver" conf="compile, runtime" rev="2.4" rev-constraint-default="2.4" rev-constraint-dynamic="2.4" callerrev="2.48.2"/>
@@ -1754,7 +1887,7 @@
 			</revision>
 		</module>
 		<module organisation="junit" name="junit">
-			<revision name="4.12" status="release" pubdate="20141204171743" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://junit.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="85">
+			<revision name="4.12" status="release" pubdate="20141204171743" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://junit.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="93">
 				<license name="Eclipse Public License 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
 				<metadata-artifact status="no" details="" size="3354" time="0" location="C:\Users\eischer\.ivy2\cache\junit\junit\ivy-4.12.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/junit/junit/4.12/junit-4.12.pom"/>
 				<caller organisation="com.typesafe.play" name="play-test_2.11" conf="default, compile, runtime, master" rev="4.12" rev-constraint-default="4.12" rev-constraint-dynamic="4.12" callerrev="2.5.14"/>
@@ -1773,7 +1906,7 @@
 			</revision>
 		</module>
 		<module organisation="org.hamcrest" name="hamcrest-core">
-			<revision name="1.3" status="release" pubdate="20120709230802" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="86">
+			<revision name="1.3" status="release" pubdate="20120709230802" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="94">
 				<license name="New BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
 				<metadata-artifact status="no" details="" size="2647" time="0" location="C:\Users\eischer\.ivy2\cache\org.hamcrest\hamcrest-core\ivy-1.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.pom"/>
 				<caller organisation="junit" name="junit" conf="compile, runtime" rev="1.3" rev-constraint-default="1.3" rev-constraint-dynamic="1.3" callerrev="4.12"/>
@@ -1801,11 +1934,14 @@
 				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="2.11.11"/>
 				<caller organisation="com.typesafe.akka" name="akka-actor_2.11" conf="compile, runtime" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="2.4.17"/>
 				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.11" conf="compile, runtime" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="2.4.17"/>
+				<caller organisation="com.typesafe.play" name="play-jdbc-api_2.11" conf="compile, runtime" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="2.5.14"/>
 				<caller organisation="com.typesafe.play" name="play-streams_2.11" conf="compile, runtime" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="2.5.14"/>
 				<caller organisation="com.typesafe.play" name="play-functional_2.11" conf="compile, runtime" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="2.5.14"/>
+				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="default, compile, runtime, master" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="2.5.14"/>
 				<caller organisation="org.scala-lang.modules" name="scala-xml_2.11" conf="compile, runtime" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="1.0.1"/>
 				<caller organisation="org.scala-lang.modules" name="scala-java8-compat_2.11" conf="compile, runtime" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="0.7.0"/>
 				<caller organisation="com.typesafe.play" name="play-ws_2.11" conf="compile, runtime" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="2.5.14"/>
+				<caller organisation="com.typesafe.play" name="play-jdbc_2.11" conf="compile, runtime" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="2.5.14"/>
 				<caller organisation="com.heig-vd.ifc" name="switchmonitor_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="1.0-SNAPSHOT"/>
 				<caller organisation="com.typesafe.play" name="play-iteratees_2.11" conf="compile, runtime" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="2.5.14"/>
 				<caller organisation="com.typesafe.play" name="play-test_2.11" conf="default, compile, runtime, master" rev="2.11.11" rev-constraint-default="2.11.11" rev-constraint-dynamic="2.11.11" callerrev="2.5.14"/>

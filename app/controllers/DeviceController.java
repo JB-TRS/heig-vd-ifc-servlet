@@ -3,14 +3,20 @@ import javax.inject.Inject;
 
 import play.mvc.*;
 import play.libs.ws.*;
+
+import java.util.List;
+import java.util.ArrayList;
 import java.util.concurrent.CompletionStage;
 import java.io.File;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
+
+import models.Device;
 
 
 /**
@@ -28,9 +34,35 @@ public class DeviceController extends Controller {
      * <code>GET</code> request with a path of <code>/</code>.
      */
     public Result index() {
+        List<Device> deviceElement = new ArrayList<Device>();
 
+        WSRequest request = ws.url("http://192.168.100.1:8000/devices");
 
-        return ok(views.html.index.render());
+        CompletionStage<Document> responseDocument = request.get()
+                .thenApply(WSResponse::asXml);
+
+        Document deviceDocument = responseDocument
+                .toCompletableFuture().join();
+
+        NodeList deviceList = deviceDocument.getElementsByTagName("switch");
+
+        for (int temp = 0; temp < deviceList.getLength(); temp++) {
+
+            Node nNode = deviceList.item(temp);
+
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement = (Element) nNode;
+
+                Device d = new Device();
+
+                d.setName(eElement.getElementsByTagName("name").item(0).getTextContent());
+                d.setIpAddress(eElement.getElementsByTagName("ip").item(0).getTextContent());
+
+                deviceElement.add(d);
+            }
+        }
+
+        return ok(views.html.devices.render(deviceElement));
     }
 
     /**
@@ -40,28 +72,26 @@ public class DeviceController extends Controller {
      * @return ok: retourne un code 200 avec la vue
      */
     public Result show(Long id) {
-        CompletionStage<Document> responseDocument = ws.url("http://192.168.100.1/devices/" + id).get()
+        WSRequest request = ws.url("http://192.168.100.1:8000/devices/" + id);
+
+        CompletionStage<Document> responseDocument = request.get()
                 .thenApply(WSResponse::asXml);
 
-        Document deviceDocument = responseDocument.toCompletableFuture().get();
+        Document deviceDocument = responseDocument
+                .toCompletableFuture().join();
 
         NodeList deviceList = deviceDocument.getElementsByTagName("switch");
 
-        ArrayList<Element> deviceElement = new ArrayList<Element>();
+        Node deviceNode = deviceList.item(0);
 
-        for (int temp = 0; temp < deviceList.getLength(); temp++) {
+        Element elementNode = (Element) deviceNode;
 
-            Node nNode = deviceList.item(temp);
+        Device d = new Device();
 
-            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+        d.setName(elementNode.getElementsByTagName("name").item(0).getTextContent());
+        d.setIpAddress(elementNode.getElementsByTagName("ip").item(0).getTextContent());
 
-                Element eElement = (Element) nNode;
-
-                deviceElement.add(eElement);
-            }
-        }
-
-        return ok(views.html.device.render(id, deviceElement));
+        return ok(views.html.device.render(id, d));
     }
 
 }
