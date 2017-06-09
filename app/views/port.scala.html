@@ -1,0 +1,11 @@
+@(portId: Long, port: Port)
+
+@main("Port page") {
+    <h1>Port: @portId</h1>
+
+    <ul>
+        <li>@port.getName()</li>
+        <li>@port.getIn()</li>
+        <li>@port.getOut()</li>
+    </ul>
+}

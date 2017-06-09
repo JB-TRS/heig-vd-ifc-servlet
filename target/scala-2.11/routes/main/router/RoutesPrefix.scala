@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/eischer/IdeaProjects/switchmonitor/conf/routes
-// @DATE:Thu Jun 08 11:03:30 CEST 2017
+// @DATE:Fri Jun 09 15:32:23 CEST 2017
 
 
 package router {

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/eischer/IdeaProjects/switchmonitor/conf/routes
-// @DATE:Thu Jun 08 11:03:30 CEST 2017
+// @DATE:Fri Jun 09 15:32:23 CEST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -65,7 +65,37 @@ package controllers.javascript {
   
   }
 
-  // @LINE:12
+  // @LINE:10
+  class ReversePortController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:11
+    def show: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PortController.show",
+      """
+        function(device_id0,port_id1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "devices/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("device_id", device_id0) + "/ports/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("port_id", port_id1)})
+        }
+      """
+    )
+  
+    // @LINE:10
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PortController.index",
+      """
+        function(device_id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "devices/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("device_id", device_id0) + "/ports"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:14
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -73,7 +103,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:12
+    // @LINE:14
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

@@ -1,0 +1,13 @@
+@(ports: List[Port])
+
+@main("Ports page") {
+    <h1>Liste des ports</h1>
+
+    @for(port <- ports){
+        <ul>
+            <li>@port.getName()</li>
+            <li>@port.getIn()</li>
+            <li>@port.getOut()</li>
+        </ul>
+    }
+}

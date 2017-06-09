@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/eischer/IdeaProjects/switchmonitor/conf/routes
-// @DATE:Thu Jun 08 11:03:30 CEST 2017
+// @DATE:Fri Jun 09 15:32:23 CEST 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -49,14 +49,35 @@ package controllers {
   
   }
 
-  // @LINE:12
+  // @LINE:10
+  class ReversePortController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:11
+    def show(device_id:Long, port_id:Long): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "devices/" + implicitly[PathBindable[Long]].unbind("device_id", device_id) + "/ports/" + implicitly[PathBindable[Long]].unbind("port_id", port_id))
+    }
+  
+    // @LINE:10
+    def index(device_id:Long): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "devices/" + implicitly[PathBindable[Long]].unbind("device_id", device_id) + "/ports")
+    }
+  
+  }
+
+  // @LINE:14
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:12
+    // @LINE:14
     def versioned(file:Asset): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[Asset]].unbind("file", file))
