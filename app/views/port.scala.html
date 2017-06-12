@@ -1,11 +1,22 @@
-@(portId: Long, port: Port)
+@(portId: Long, port: Port, device: String)
 
 @main("Port page") {
-    <h1>Port: @portId</h1>
+    <h2>Device: @device -> Port: @port.getName()</h2>
 
     <ul>
-        <li>@port.getName()</li>
-        <li>@port.getIn()</li>
-        <li>@port.getOut()</li>
+        @defining("/assets/images/" + device + "/" + port.getName() + "/" + port.getName()) { portPath =>
+            @defining(portPath + "-daily.png") { dailyPath =>
+                <img src=@dailyPath alt="Daily graph" height="170" width="372" >
+            }
+            @defining(portPath + "-weekly.png") { weeklyPath =>
+                <img src=@weeklyPath alt="Weekly graph" height="170" width="372" >
+            }
+            @defining(portPath + "-monthly.png") { monthlyPath =>
+                <img src=@monthlyPath alt="Monthly graph" height="170" width="372" >
+            }
+            @defining(portPath + "-annual.png") { annualPath =>
+                <img src=@annualPath alt="Annual graph" height="170" width="372" >
+            }
+        }
     </ul>
 }

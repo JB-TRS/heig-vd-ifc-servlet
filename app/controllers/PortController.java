@@ -45,6 +45,7 @@ public class PortController extends Controller {
                 .toCompletableFuture().join();
 
         NodeList portList = portDocument.getElementsByTagName("port");
+        String device = portDocument.getElementsByTagName("device").item(0).getTextContent();
 
         for (int temp = 0; temp < portList.getLength(); temp++) {
 
@@ -63,7 +64,7 @@ public class PortController extends Controller {
             }
         }
 
-        return ok(views.html.ports.render(portElement));
+        return ok(views.html.ports.render(portElement, device));
     }
 
     /**
@@ -83,6 +84,7 @@ public class PortController extends Controller {
                 .toCompletableFuture().join();
 
         NodeList portList = portDocument.getElementsByTagName("port");
+        String device = portDocument.getElementsByTagName("device").item(0).getTextContent();
 
         Node portNode = portList.item(0);
 
@@ -94,7 +96,8 @@ public class PortController extends Controller {
         p.setIn(Long.parseLong(elementNode.getElementsByTagName("in").item(0).getTextContent()));
         p.setOut(Long.parseLong(elementNode.getElementsByTagName("out").item(0).getTextContent()));
 
-        return ok(views.html.port.render(portId, p));
+        return ok(views.html.port.render(portId, p, device));
     }
 
 }
+
