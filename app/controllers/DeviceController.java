@@ -29,6 +29,7 @@ import models.Device;
 public class DeviceController extends Controller {
 
     @Inject WSClient ws;
+    String restUrl = "http://127.0.0.1:8000";
 
     /**
      * An action that renders an HTML page with a welcome message.
@@ -37,10 +38,10 @@ public class DeviceController extends Controller {
      * <code>GET</code> request with a path of <code>/</code>.
      */
     public Result index() {
-        Form<Device> deviceForm = formFactory.form(Device.class);
+        Form<Device> deviceForm = form(Device.class);
         List<Device> deviceElement = new ArrayList<Device>();
 
-        WSRequest request = ws.url("http://192.168.100.1:8000/devices");
+        WSRequest request = ws.url(restUrl + "/devices");
 
         CompletionStage<Document> responseDocument = request.get()
                 .thenApply(WSResponse::asXml);
@@ -76,9 +77,13 @@ public class DeviceController extends Controller {
      * @return ok: retourne un code 200 avec la vue
      */
     public Result submit() {
-
-
-        return ok(views.html.device.render(d));
+        Form<Device> deviceForm = Form.form(Device.class).bindFromRequest();
+        if (deviceForm.hasErrors()) {
+            return badRequest("/");
+        } else {
+            Device device = deviceForm.get();
+            return ok(views.html.index.render());
+        }
     }
 
     /**
@@ -88,7 +93,7 @@ public class DeviceController extends Controller {
      * @return ok: retourne un code 200 avec la vue
      */
     public Result show(Long id) {
-        WSRequest request = ws.url("http://192.168.100.1:8000/devices/" + id);
+        WSRequest request = ws.url(restUrl + "/devices/" + id);
 
         CompletionStage<Document> responseDocument = request.get()
                 .thenApply(WSResponse::asXml);

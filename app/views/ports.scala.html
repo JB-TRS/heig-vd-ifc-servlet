@@ -6,7 +6,7 @@
     @for(port <- ports){
         <ul>
         	<li><a href="/devices/@deviceId/ports/@port.getId()">@port.getName()</a></li>
-            @defining("/assets/images/" + device + "/" + port.getName() + "/" + port.getName()) { portPath =>
+            @defining("http://192.168.100.2/graph/" + device + "/" + port.getName() + "/" + port.getName()) { portPath =>
             	@defining(portPath + "-daily.png") { dailyPath =>
                 	<img src="@dailyPath" alt="Daily graph" height="170" width="372" >
             	}

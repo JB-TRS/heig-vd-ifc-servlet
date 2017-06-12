@@ -26,6 +26,7 @@ import models.Port;
 public class PortController extends Controller {
 
     @Inject WSClient ws;
+    String restUrl = "http://127.0.0.1:8000";
 
     /**
      * An action that renders an HTML page with a welcome message.
@@ -36,7 +37,7 @@ public class PortController extends Controller {
     public Result index(Long deviceId) {
         List<Port> portElement = new ArrayList<Port>();
 
-        WSRequest request = ws.url("http://192.168.100.1:8000/devices/" + deviceId + "/ports");
+        WSRequest request = ws.url(restUrl + "/devices/" + deviceId + "/ports");
 
         CompletionStage<Document> responseDocument = request.get()
                 .thenApply(WSResponse::asXml);
@@ -76,7 +77,7 @@ public class PortController extends Controller {
      *
      */
     public Result show(Long deviceId, Long portId) {
-        WSRequest request = ws.url("http://192.168.100.1:8000/devices/" + deviceId + "/ports/" + portId);
+        WSRequest request = ws.url(restUrl + "/devices/" + deviceId + "/ports/" + portId);
 
         CompletionStage<Document> responseDocument = request.get()
                 .thenApply(WSResponse::asXml);
