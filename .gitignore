@@ -1,0 +1,11 @@
+logs
+*.iml
+target
+.idea
+.idea_modules
+.vscode
+RUNNING_PID
+generated.keystore
+generated.truststore
+*.log
+.idea
