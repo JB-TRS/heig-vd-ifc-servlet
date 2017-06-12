@@ -1,4 +1,4 @@
-@(devices: List[Device])
+@(devices: List[Device], deviceForm: Form[Device])
 
 @main("Devices page") {
     <h1>Liste des équipements</h1>
@@ -8,6 +8,17 @@
             <li><a href="/devices/@device.getId()">@device.getName()</a></li>
         </ul>
     }
+
+    <h1>Ajouter un Equipement</h1>
+
+
+    @helper.form(action = routes.DeviceController.submit()) {
+
+    	@helper.inputText(deviceForm("name"))
+
+    	@helper.inputText(deviceForm("ip"))
+	}
+
 
     <a href="/">Home</a>
 }

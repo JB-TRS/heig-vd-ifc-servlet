@@ -6,6 +6,7 @@
 GET     /                           			controllers.HomeController.index
 
 GET     /devices                                controllers.DeviceController.index
+POST    /devices								controllers.DeviceController.submit
 GET     /devices/:id                            controllers.DeviceController.show(id: Long)
 GET     /devices/:device_id/ports               controllers.PortController.index(device_id: Long)
 GET     /devices/:device_id/ports/:port_id      controllers.PortController.show(device_id: Long, port_id: Long)

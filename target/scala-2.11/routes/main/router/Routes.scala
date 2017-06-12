@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/eischer/IdeaProjects/switchmonitor/conf/routes
-// @DATE:Mon Jun 12 14:04:13 CEST 2017
+// @DATE:Mon Jun 12 15:58:55 CEST 2017
 
 package router
 
@@ -20,9 +20,9 @@ class Routes(
   HomeController_0: controllers.HomeController,
   // @LINE:8
   DeviceController_3: controllers.DeviceController,
-  // @LINE:10
+  // @LINE:11
   PortController_2: controllers.PortController,
-  // @LINE:14
+  // @LINE:15
   Assets_1: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -33,9 +33,9 @@ class Routes(
     HomeController_0: controllers.HomeController,
     // @LINE:8
     DeviceController_3: controllers.DeviceController,
-    // @LINE:10
+    // @LINE:11
     PortController_2: controllers.PortController,
-    // @LINE:14
+    // @LINE:15
     Assets_1: controllers.Assets
   ) = this(errorHandler, HomeController_0, DeviceController_3, PortController_2, Assets_1, "/")
 
@@ -53,6 +53,7 @@ class Routes(
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """devices""", """controllers.DeviceController.index"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """devices""", """controllers.DeviceController.submit"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """devices/""" + "$" + """id<[^/]+>""", """controllers.DeviceController.show(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """devices/""" + "$" + """device_id<[^/]+>/ports""", """controllers.PortController.index(device_id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """devices/""" + "$" + """device_id<[^/]+>/ports/""" + "$" + """port_id<[^/]+>""", """controllers.PortController.show(device_id:Long, port_id:Long)"""),
@@ -99,10 +100,27 @@ class Routes(
   )
 
   // @LINE:9
-  private[this] lazy val controllers_DeviceController_show2_route = Route("GET",
+  private[this] lazy val controllers_DeviceController_submit2_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("devices")))
+  )
+  private[this] lazy val controllers_DeviceController_submit2_invoker = createInvoker(
+    DeviceController_3.submit,
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.DeviceController",
+      "submit",
+      Nil,
+      "POST",
+      """""",
+      this.prefix + """devices"""
+    )
+  )
+
+  // @LINE:10
+  private[this] lazy val controllers_DeviceController_show3_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("devices/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_DeviceController_show2_invoker = createInvoker(
+  private[this] lazy val controllers_DeviceController_show3_invoker = createInvoker(
     DeviceController_3.show(fakeValue[Long]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -115,11 +133,11 @@ class Routes(
     )
   )
 
-  // @LINE:10
-  private[this] lazy val controllers_PortController_index3_route = Route("GET",
+  // @LINE:11
+  private[this] lazy val controllers_PortController_index4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("devices/"), DynamicPart("device_id", """[^/]+""",true), StaticPart("/ports")))
   )
-  private[this] lazy val controllers_PortController_index3_invoker = createInvoker(
+  private[this] lazy val controllers_PortController_index4_invoker = createInvoker(
     PortController_2.index(fakeValue[Long]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -132,11 +150,11 @@ class Routes(
     )
   )
 
-  // @LINE:11
-  private[this] lazy val controllers_PortController_show4_route = Route("GET",
+  // @LINE:12
+  private[this] lazy val controllers_PortController_show5_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("devices/"), DynamicPart("device_id", """[^/]+""",true), StaticPart("/ports/"), DynamicPart("port_id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_PortController_show4_invoker = createInvoker(
+  private[this] lazy val controllers_PortController_show5_invoker = createInvoker(
     PortController_2.show(fakeValue[Long], fakeValue[Long]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -149,11 +167,11 @@ class Routes(
     )
   )
 
-  // @LINE:14
-  private[this] lazy val controllers_Assets_versioned5_route = Route("GET",
+  // @LINE:15
+  private[this] lazy val controllers_Assets_versioned6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned5_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned6_invoker = createInvoker(
     Assets_1.versioned(fakeValue[String], fakeValue[Asset]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -182,27 +200,33 @@ class Routes(
       }
   
     // @LINE:9
-    case controllers_DeviceController_show2_route(params) =>
-      call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_DeviceController_show2_invoker.call(DeviceController_3.show(id))
+    case controllers_DeviceController_submit2_route(params) =>
+      call { 
+        controllers_DeviceController_submit2_invoker.call(DeviceController_3.submit)
       }
   
     // @LINE:10
-    case controllers_PortController_index3_route(params) =>
-      call(params.fromPath[Long]("device_id", None)) { (device_id) =>
-        controllers_PortController_index3_invoker.call(PortController_2.index(device_id))
+    case controllers_DeviceController_show3_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_DeviceController_show3_invoker.call(DeviceController_3.show(id))
       }
   
     // @LINE:11
-    case controllers_PortController_show4_route(params) =>
-      call(params.fromPath[Long]("device_id", None), params.fromPath[Long]("port_id", None)) { (device_id, port_id) =>
-        controllers_PortController_show4_invoker.call(PortController_2.show(device_id, port_id))
+    case controllers_PortController_index4_route(params) =>
+      call(params.fromPath[Long]("device_id", None)) { (device_id) =>
+        controllers_PortController_index4_invoker.call(PortController_2.index(device_id))
       }
   
-    // @LINE:14
-    case controllers_Assets_versioned5_route(params) =>
+    // @LINE:12
+    case controllers_PortController_show5_route(params) =>
+      call(params.fromPath[Long]("device_id", None), params.fromPath[Long]("port_id", None)) { (device_id, port_id) =>
+        controllers_PortController_show5_invoker.call(PortController_2.show(device_id, port_id))
+      }
+  
+    // @LINE:15
+    case controllers_Assets_versioned6_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned5_invoker.call(Assets_1.versioned(path, file))
+        controllers_Assets_versioned6_invoker.call(Assets_1.versioned(path, file))
       }
   }
 }

@@ -3,6 +3,9 @@ import javax.inject.Inject;
 
 import play.mvc.*;
 import play.libs.ws.*;
+import play.data.*;
+import play.data.FormFactory.*;
+import static play.data.Form.*;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -34,6 +37,7 @@ public class DeviceController extends Controller {
      * <code>GET</code> request with a path of <code>/</code>.
      */
     public Result index() {
+        Form<Device> deviceForm = formFactory.form(Device.class);
         List<Device> deviceElement = new ArrayList<Device>();
 
         WSRequest request = ws.url("http://192.168.100.1:8000/devices");
@@ -63,7 +67,18 @@ public class DeviceController extends Controller {
             }
         }
 
-        return ok(views.html.devices.render(deviceElement));
+        return ok(views.html.devices.render(deviceElement, deviceForm));
+    }
+
+    /**
+     * Ajoute un nouveau switch
+     *
+     * @return ok: retourne un code 200 avec la vue
+     */
+    public Result submit() {
+
+
+        return ok(views.html.device.render(d));
     }
 
     /**
