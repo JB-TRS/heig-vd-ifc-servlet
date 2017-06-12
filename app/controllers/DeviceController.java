@@ -6,6 +6,8 @@ import play.libs.ws.*;
 import play.data.*;
 import play.data.FormFactory.*;
 import static play.data.Form.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import play.libs.Json;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -82,7 +84,14 @@ public class DeviceController extends Controller {
             return badRequest("/");
         } else {
             Device device = deviceForm.get();
-            return ok(views.html.index.render());
+
+            JsonNode json = Json.newObject()
+                    .put("name", device.getName())
+                    .put("ip", device.getIpAddress());
+
+            ws.url(restUrl + "/devices").setHeader("Content-Type", "application/json").post(json);
+
+            return redirect("/devices");
         }
     }
 

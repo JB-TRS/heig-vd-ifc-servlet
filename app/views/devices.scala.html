@@ -1,3 +1,5 @@
+@import helper._
+
 @(devices: List[Device], deviceForm: Form[Device])
 
 @main("Devices page") {
@@ -13,12 +15,17 @@
 
 
     @helper.form(action = routes.DeviceController.submit()) {
+        @CSRF.formField
 
-    	@helper.inputText(deviceForm("name"))
-
-    	@helper.inputText(deviceForm("ip"))
-
-        <input type="submit" value="Submit">
+    	<p>
+            <input type="text" name="name" placeholder="device name">
+        </p>
+        <p>
+            <input type="text" name="ipAddress" placeholder="ip address">
+        </p>
+        <p>
+            <button type="submit">Ajouter</button>
+        </p>
 	}
 
     <br><br>
