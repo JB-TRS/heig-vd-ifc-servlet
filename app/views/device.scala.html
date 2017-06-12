@@ -1,13 +1,33 @@
-@(device: Device)
+@import helper._
+
+@(device: Device, portForm: Form[Port])
 
 @main("Device page") {
     <h1>Equipements: @device.getId()</h1>
 
     <ul>
         <li>Nom: @device.getName()</li>
-        <li>Adresse IP:@device.getIpAddress()</li>
+        <li>Adresse IP: @device.getIpAddress()</li>
         <li><a href="/devices/@device.getId()/ports">Graph des ports</a></li>
     </ul>
+
+    <h1>Ajouter un Port</h1>
+
+    @helper.form(action = routes.PortController.submit()) {
+        @CSRF.formField
+
+    	<p>
+            <input type="text" name="name" placeholder="port name">
+        </p>
+        <p>
+            <input type="hidden" name="deviceId" value="@device.getId()">
+        </p>
+        <p>
+            <button type="submit">Ajouter</button>
+        </p>
+	}
+
+    <br><br>
 
     <a href="/">Home</a>
 }

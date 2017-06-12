@@ -1,8 +1,14 @@
 package controllers;
+
 import javax.inject.Inject;
 
 import play.mvc.*;
 import play.libs.ws.*;
+import play.data.*;
+import play.data.FormFactory.*;
+import static play.data.Form.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import play.libs.Json;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -68,6 +74,32 @@ public class PortController extends Controller {
 
         return ok(views.html.ports.render(portElement, device, deviceId));
     }
+
+
+    /**
+     * Ajoute un nouveau port
+     *
+     * @return ok: retourne un code 200 avec la vue
+     */
+    public Result submit() {
+        Form<Port> portForm = Form.form(Port.class).bindFromRequest();
+        if (portForm.hasErrors()) {
+            return badRequest("/");
+        } else {
+            Port port = portForm.get();
+
+            JsonNode json = Json.newObject()
+                    .put("name", port.getName())
+                    .put("in", "0")
+                    .put("out", "0")
+                    .put("device_id", port.getDeviceId());
+
+            ws.url(restUrl + "/devices/" + port.getDeviceId() + "/ports").setHeader("Content-Type", "application/json").post(json);
+
+            return redirect("/devices");
+        }
+    }
+
 
     /**
      * Affiche les graphs des ports d'un device

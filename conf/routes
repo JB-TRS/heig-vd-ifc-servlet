@@ -10,6 +10,7 @@ POST    /devices								controllers.DeviceController.submit
 GET     /devices/:id                            controllers.DeviceController.show(id: Long)
 GET     /devices/:device_id/ports               controllers.PortController.index(device_id: Long)
 GET     /devices/:device_id/ports/:port_id      controllers.PortController.show(device_id: Long, port_id: Long)
+POST    /ports									controllers.PortController.submit
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               			controllers.Assets.versioned(path="/public", file: Asset)

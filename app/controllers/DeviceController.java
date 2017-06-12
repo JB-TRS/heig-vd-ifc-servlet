@@ -22,6 +22,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
 import models.Device;
+import models.Port;
 
 
 /**
@@ -102,6 +103,8 @@ public class DeviceController extends Controller {
      * @return ok: retourne un code 200 avec la vue
      */
     public Result show(Long id) {
+        Form<Port> portForm = form(Port.class);
+
         WSRequest request = ws.url(restUrl + "/devices/" + id);
 
         CompletionStage<Document> responseDocument = request.get()
@@ -122,7 +125,7 @@ public class DeviceController extends Controller {
         d.setName(elementNode.getElementsByTagName("name").item(0).getTextContent());
         d.setIpAddress(elementNode.getElementsByTagName("ip").item(0).getTextContent());
 
-        return ok(views.html.device.render(d));
+        return ok(views.html.device.render(d, portForm));
     }
 
 }

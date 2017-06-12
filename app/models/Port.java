@@ -16,6 +16,8 @@ public class Port {
     Long in;
     Long out;
     Long id;
+    String deviceId;
+
 
     public String getName()  {
         return name;
@@ -33,6 +35,10 @@ public class Port {
         return id;
     }
 
+    public String getDeviceId() {
+        return deviceId;
+    }
+
 
     public void setName(String deviceName) {
         name = deviceName;
@@ -46,8 +52,13 @@ public class Port {
         out = deviceOut;
     }
 
-    public void setId(Long deviceId) {
-        id = deviceId;
+    public void setId(Long portId) {
+        id = portId;
     }
+
+    public void setDeviceId(String formId) {
+        deviceId = formId;
+    }
+
 
 }
