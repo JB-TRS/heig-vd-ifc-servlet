@@ -1,3 +1,8 @@
+# general
+*~
+*.log
+tmp
+dump
 logs
 *.iml
 target
@@ -8,4 +13,11 @@ RUNNING_PID
 generated.keystore
 generated.truststore
 *.log
-.idea
+
+# SBT
+dist
+project/boot
+project/target
+project/plugins/target
+target
+.target
