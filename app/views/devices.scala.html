@@ -5,8 +5,9 @@
 
     @for(device <- devices){
         <ul>
-            <li>@device.getName()</li>
-            <li>@device.getIpAddress()</li>
+            <li><a href="/devices/@device.getId()">@device.getName()</a></li>
         </ul>
     }
+
+    <a href="/">Home</a>
 }

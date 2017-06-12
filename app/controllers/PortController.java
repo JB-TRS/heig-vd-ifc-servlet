@@ -56,6 +56,7 @@ public class PortController extends Controller {
 
                 Port p = new Port();
 
+                p.setId(Long.parseLong(eElement.getAttribute("id")));
                 p.setName(eElement.getElementsByTagName("name").item(0).getTextContent());
                 p.setIn(Long.parseLong(eElement.getElementsByTagName("in").item(0).getTextContent()));
                 p.setOut(Long.parseLong(eElement.getElementsByTagName("out").item(0).getTextContent()));
@@ -64,7 +65,7 @@ public class PortController extends Controller {
             }
         }
 
-        return ok(views.html.ports.render(portElement, device));
+        return ok(views.html.ports.render(portElement, device, deviceId));
     }
 
     /**
@@ -92,11 +93,12 @@ public class PortController extends Controller {
 
         Port p = new Port();
 
+        p.setId(Long.parseLong(elementNode.getAttribute("id")));
         p.setName(elementNode.getElementsByTagName("name").item(0).getTextContent());
         p.setIn(Long.parseLong(elementNode.getElementsByTagName("in").item(0).getTextContent()));
         p.setOut(Long.parseLong(elementNode.getElementsByTagName("out").item(0).getTextContent()));
 
-        return ok(views.html.port.render(portId, p, device));
+        return ok(views.html.port.render(p, device));
     }
 
 }

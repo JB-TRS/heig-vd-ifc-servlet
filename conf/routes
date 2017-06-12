@@ -3,7 +3,7 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+GET     /                           			controllers.HomeController.index
 
 GET     /devices                                controllers.DeviceController.index
 GET     /devices/:id                            controllers.DeviceController.show(id: Long)
@@ -11,4 +11,5 @@ GET     /devices/:device_id/ports               controllers.PortController.index
 GET     /devices/:device_id/ports/:port_id      controllers.PortController.show(device_id: Long, port_id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET     /assets/*file               			controllers.Assets.versioned(path="/public", file: Asset)
+

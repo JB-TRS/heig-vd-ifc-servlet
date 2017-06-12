@@ -36,11 +36,12 @@ Seq[Any](format.raw/*1.25*/("""
 
     """),_display_(/*6.6*/for(device <- devices) yield /*6.28*/{_display_(Seq[Any](format.raw/*6.29*/("""
         """),format.raw/*7.9*/("""<ul>
-            <li>"""),_display_(/*8.18*/device/*8.24*/.getName()),format.raw/*8.34*/("""</li>
-            <li>"""),_display_(/*9.18*/device/*9.24*/.getIpAddress()),format.raw/*9.39*/("""</li>
+            <li><a href="/devices/"""),_display_(/*8.36*/device/*8.42*/.getId()),format.raw/*8.50*/("""">"""),_display_(/*8.53*/device/*8.59*/.getName()),format.raw/*8.69*/("""</a></li>
         </ul>
-    """)))}),format.raw/*11.6*/("""
-""")))}),format.raw/*12.2*/("""
+    """)))}),format.raw/*10.6*/("""
+
+    """),format.raw/*12.5*/("""<a href="/">Home</a>
+""")))}),format.raw/*13.2*/("""
 """))
       }
     }
@@ -61,11 +62,11 @@ Seq[Any](format.raw/*1.25*/("""
 object devices extends devices_Scope0.devices
               /*
                   -- GENERATED --
-                  DATE: Fri Jun 09 14:47:48 CEST 2017
+                  DATE: Mon Jun 12 14:35:02 CEST 2017
                   SOURCE: C:/Users/eischer/IdeaProjects/switchmonitor/app/views/devices.scala.html
-                  HASH: 31ceb947b01a8ac211045126a1e50b95de1ec943
-                  MATRIX: 755->1|873->24|903->29|931->49|970->51|1002->57|1066->96|1103->118|1141->119|1177->129|1226->152|1240->158|1270->168|1320->192|1334->198|1369->213|1426->240|1459->243
-                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|37->6|37->6|37->6|38->7|39->8|39->8|39->8|40->9|40->9|40->9|42->11|43->12
+                  HASH: 076087a029474fc2c675cb4a1822fa8d14184e06
+                  MATRIX: 755->1|873->24|903->29|931->49|970->51|1002->57|1066->96|1103->118|1141->119|1177->129|1244->170|1258->176|1286->184|1315->187|1329->193|1359->203|1420->234|1455->242|1508->265
+                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|37->6|37->6|37->6|38->7|39->8|39->8|39->8|39->8|39->8|39->8|41->10|43->12|44->13
                   -- GENERATED --
               */
           

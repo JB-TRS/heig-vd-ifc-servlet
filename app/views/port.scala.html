@@ -1,22 +1,33 @@
-@(portId: Long, port: Port, device: String)
+@(port: Port, device: String)
 
 @main("Port page") {
-    <h2>Device: @device -> Port: @port.getName()</h2>
+    <h2>Détail du port</h2>
+    <h4>Equipement: @device</h4>
+    <h4>Port: @port.getName()</h4>
 
     <ul>
         @defining("/assets/images/" + device + "/" + port.getName() + "/" + port.getName()) { portPath =>
             @defining(portPath + "-daily.png") { dailyPath =>
-                <img src=@dailyPath alt="Daily graph" height="170" width="372" >
+                <li>Graph journalier</li>
+                <img src=@dailyPath alt="Daily graph" height="255" width="558" >
             }
+            <br>
             @defining(portPath + "-weekly.png") { weeklyPath =>
-                <img src=@weeklyPath alt="Weekly graph" height="170" width="372" >
+                <li>Graph de la semaine</li>
+                <img src=@weeklyPath alt="Weekly graph" height="255" width="558" >
             }
+            <br>
             @defining(portPath + "-monthly.png") { monthlyPath =>
-                <img src=@monthlyPath alt="Monthly graph" height="170" width="372" >
+                <li>Graph du mois</li>
+                <img src=@monthlyPath alt="Monthly graph" height="255" width="558" >
             }
+            <br>
             @defining(portPath + "-annual.png") { annualPath =>
-                <img src=@annualPath alt="Annual graph" height="170" width="372" >
+                <li>Graph annuel</li>
+                <img src=@annualPath alt="Annual graph" height="255" width="558" >
             }
         }
     </ul>
+
+    <a href="/">Home</a>
 }

@@ -12,3 +12,4 @@ GET     /devices/:device_id/ports/:port_id      controllers.PortController.show(
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+

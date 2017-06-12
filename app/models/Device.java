@@ -14,6 +14,7 @@ public class Device {
 
     String name;
     String ipAddress;
+    Long id;
 
     public String getName()  {
         return name;
@@ -23,12 +24,20 @@ public class Device {
         return ipAddress;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public void setName(String deviceName) {
         name = deviceName;
     }
 
     public void setIpAddress(String deviceIp) {
         ipAddress = deviceIp;
+    }
+
+    public void setId(Long deviceId){
+        id = deviceId;
     }
 
 }

@@ -55,6 +55,7 @@ public class DeviceController extends Controller {
 
                 Device d = new Device();
 
+                d.setId(Long.parseLong(eElement.getAttribute("id")));
                 d.setName(eElement.getElementsByTagName("name").item(0).getTextContent());
                 d.setIpAddress(eElement.getElementsByTagName("ip").item(0).getTextContent());
 
@@ -88,10 +89,11 @@ public class DeviceController extends Controller {
 
         Device d = new Device();
 
+        d.setId(Long.parseLong(elementNode.getAttribute("id")));
         d.setName(elementNode.getElementsByTagName("name").item(0).getTextContent());
         d.setIpAddress(elementNode.getElementsByTagName("ip").item(0).getTextContent());
 
-        return ok(views.html.device.render(id, d));
+        return ok(views.html.device.render(d));
     }
 
 }

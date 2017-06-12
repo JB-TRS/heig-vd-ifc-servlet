@@ -1,10 +1,13 @@
-@(deviceId: Long, device: Device)
+@(device: Device)
 
 @main("Device page") {
-    <h1>Equipements: @deviceId</h1>
+    <h1>Equipements: @device.getId()</h1>
 
     <ul>
-        <li>@device.getName()</li>
-        <li>@device.getIpAddress()</li>
+        <li>Nom: @device.getName()</li>
+        <li>Adresse IP:@device.getIpAddress()</li>
+        <li><a href="/devices/@device.getId()/ports">Graph des ports</a></li>
     </ul>
+
+    <a href="/">Home</a>
 }
