@@ -32,7 +32,7 @@ import models.Port;
 public class DeviceController extends Controller {
 
     @Inject WSClient ws;
-    String restUrl = "http://127.0.0.1:8000";
+    String restUrl = "http://192.168.100.1:8000";
 
     /**
      * An action that renders an HTML page with a welcome message.

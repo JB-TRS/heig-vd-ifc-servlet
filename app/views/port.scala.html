@@ -6,7 +6,7 @@
     <h4>Port: @port.getName()</h4>
 
     <ul>
-        @defining("http://192.168.100.2/graph/" + device + "/" + port.getName() + "/" + port.getName()) { portPath =>
+        @defining("http://192.168.100.2/graph/" + device + "/" + port.getCleanName() + "/" + port.getCleanName()) { portPath =>
             @defining(portPath + "-daily.png") { dailyPath =>
                 <li>Graph journalier</li>
                 <img src=@dailyPath alt="Daily graph" height="255" width="558" >

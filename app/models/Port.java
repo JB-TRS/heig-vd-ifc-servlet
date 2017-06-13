@@ -39,7 +39,11 @@ public class Port {
         return deviceId;
     }
 
-
+    public String getCleanName() {
+        return name.replaceAll("/","_");
+    }
+    
+    
     public void setName(String deviceName) {
         name = deviceName;
     }
